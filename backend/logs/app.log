@@ -1,0 +1,46 @@
+[2025-07-02T12:18:02.264Z] [::1] ERROR: Unknown authentication strategy "jwt-at" - Path: /bookings
+[2025-07-02T12:34:40.812Z] [::1] ERROR: Unknown authentication strategy "jwt-at" - Path: /bookings
+[2025-07-02T13:31:15.540Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /auth/signin
+[2025-07-02T13:31:51.913Z] [::1] ERROR: {"message":"Expected ',' or '}' after property value in JSON at position 34 (line 3 column 3)","error":"Bad Request","statusCode":400} - Path: /auth/signin
+[2025-07-02T13:32:26.196Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /auth/signin
+[2025-07-02T13:37:24.900Z] [::1] ERROR: {"message":"Expected ',' or '}' after property value in JSON at position 30 (line 3 column 1)","error":"Bad Request","statusCode":400} - Path: /auth/signin
+[2025-07-02T13:37:35.069Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /auth/signin
+[2025-07-02T14:32:36.188Z] [::1] ERROR: {"message":"Invalid credentials","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-02T14:35:53.608Z] [::1] ERROR: {"message":"Expected ',' or '}' after property value in JSON at position 46 (line 3 column 1)","error":"Bad Request","statusCode":400} - Path: /auth/signin
+[2025-07-02T14:36:10.435Z] [::1] ERROR: {"message":"Expected double-quoted property name in JSON at position 112 (line 7 column 1)","error":"Bad Request","statusCode":400} - Path: /auth/signin
+[2025-07-02T14:36:45.012Z] [::1] ERROR: {"message":"Invalid credentials","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-02T14:37:20.551Z] [::1] ERROR: {"message":"Expected double-quoted property name in JSON at position 54 (line 7 column 1)","error":"Bad Request","statusCode":400} - Path: /auth/signin
+[2025-07-02T14:37:22.490Z] [::1] ERROR: {"message":"Expected double-quoted property name in JSON at position 54 (line 7 column 1)","error":"Bad Request","statusCode":400} - Path: /auth/signin
+[2025-07-02T14:37:41.748Z] [::1] ERROR: {"message":"Invalid credentials","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-02T14:39:30.699Z] [::1] ERROR: {"message":"Invalid credentials","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-02T14:47:20.373Z] [::1] ERROR: {"message":"Invalid credentials","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-02T14:47:26.562Z] [::1] ERROR: {"message":"Invalid credentials","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-02T14:47:52.064Z] [::1] ERROR: {"message":"Invalid credentials","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-02T19:34:00.461Z] [::1] ERROR: {"message":"User with email b@gmail.com not found","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-02T19:34:27.403Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /seed-users
+[2025-07-02T19:34:31.440Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /seed-users
+[2025-07-02T19:34:53.684Z] [::1] ERROR: {"message":"Cannot GET /seed-users","error":"Not Found","statusCode":404} - Path: /seed-users
+[2025-07-02T19:34:54.916Z] [::1] ERROR: {"message":"Cannot GET /favicon.ico","error":"Not Found","statusCode":404} - Path: /favicon.ico
+[2025-07-02T19:38:54.918Z] [::1] ERROR: {"message":"Cannot GET /seed-users","error":"Not Found","statusCode":404} - Path: /seed-users
+[2025-07-02T19:38:57.995Z] [::1] ERROR: {"message":"Cannot GET /seed-users","error":"Not Found","statusCode":404} - Path: /seed-users
+[2025-07-02T19:41:16.023Z] [::1] ERROR: Configuration key "JWT_ACCESS_TOKEN_EXPIRATION_TIME" does not exist - Path: /auth/signin
+[2025-07-02T19:44:46.188Z] [::1] ERROR: Configuration key "JWT_ACCESS_TOKEN_EXPIRATION_TIME" does not exist - Path: /auth/signin
+[2025-07-02T19:45:23.256Z] [::1] ERROR: Configuration key "JWT_ACCESS_TOKEN_EXPIRATION_TIME" does not exist - Path: /auth/signin
+[2025-07-02T20:00:36.507Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /auth/refresh?id=b6fee0ab-58db-4012-9693-d25056ccf51
+[2025-07-02T20:01:12.232Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /auth/refresh?id=b6fee0ab-58db-4012-9693-d25056ccf51
+[2025-07-02T20:01:51.659Z] [::1] ERROR: {"message":"Validation failed (uuid is expected)","error":"Bad Request","statusCode":400} - Path: /auth/signout/b6fee0ab-58db-4012-9693-d25056ccf51
+[2025-07-02T21:40:49.567Z] [::1] ERROR: {"message":"Cannot GET /seed-users","error":"Not Found","statusCode":404} - Path: /seed-users
+[2025-07-03T07:30:59.123Z] [::1] ERROR: {"message":"Cannot POST /api//auth/signin","error":"Not Found","statusCode":404} - Path: /api//auth/signin
+[2025-07-03T07:31:14.968Z] [::1] ERROR: {"message":"Cannot POST //auth/signin","error":"Not Found","statusCode":404} - Path: //auth/signin
+[2025-07-03T07:39:18.727Z] [::1] ERROR: {"message":"User with email ambalebruno848@gmail.com not found","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-03T07:46:49.602Z] [::1] ERROR: {"message":"User with email ambalebruno848@gmail.com not found","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-03T07:47:11.182Z] [::1] ERROR: {"message":"Invalid credentials","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-03T07:54:02.784Z] [::1] ERROR: {"message":"User with email ambalebruno848@gmail.com not found","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-03T07:57:25.964Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /auth/signout/b6fee0ab-58db-4012-9693-d25056ccf515
+[2025-07-03T08:09:32.960Z] [::1] ERROR: {"message":"User with email ambalebruno848@gmail.com not found","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-03T08:10:00.826Z] [::1] ERROR: {"message":"User with email ambalebruno848@gmail.com not found","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-03T08:10:38.284Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides
+[2025-07-03T08:10:48.209Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users
+[2025-07-03T08:11:42.675Z] [::1] ERROR: {"message":"User with email ambalebruno848@gmail.com not found","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-03T11:11:03.769Z] [::1] ERROR: {"message":"User with email ambalebruno848@gmail.com not found","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-03T11:34:55.333Z] [::1] ERROR: {"message":"Cannot POST /api/auth/login","error":"Not Found","statusCode":404} - Path: /api/auth/login
