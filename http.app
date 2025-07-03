@@ -114,6 +114,7 @@ Content-Type: application/json
   "rating": 4.0,
   "vehicleId": "55555555-5555-5555-5555-555555555555"
 }
+testing 
 
 ### Update driver
 PATCH {{url}}/drivers/77777777-7777-7777-7777-777777777777
