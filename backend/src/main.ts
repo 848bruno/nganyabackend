@@ -39,7 +39,7 @@ async function bootstrap() {
     .addTag('notifications', 'Notification management')
     .addBearerAuth()
     .addServer('http://localhost:3001', 'Local Development Server')
-    .addServer('-', 'Production Server')
+    .addServer('https://ridesharingbackend-x2gi.onrender.com', 'Production Server')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document, {
