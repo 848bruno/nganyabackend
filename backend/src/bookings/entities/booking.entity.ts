@@ -3,6 +3,19 @@ import { Ride } from "../../rides/entities/ride.entity";
 import { User } from "../../users/entities/user.entity";
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
+
+export enum BookingType {
+  Ride = 'ride',
+  Delivery = 'delivery',
+}
+
+export enum BookingStatus {
+  Pending = 'pending',
+  Confirmed = 'confirmed',
+  Cancelled = 'cancelled',
+  Completed = 'completed',
+}
+
 @Entity('bookings')
 export class Booking {
   @PrimaryGeneratedColumn('uuid')

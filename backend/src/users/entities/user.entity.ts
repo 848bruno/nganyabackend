@@ -7,6 +7,11 @@ import { Review } from "../../reviews/entities/review.entity";
 
 import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
+export enum UserRole {
+  Customer = 'customer',
+  Driver = 'driver',
+  Admin = 'admin',
+}
 
 @Entity('users')
 export class User {

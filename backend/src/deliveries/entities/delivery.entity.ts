@@ -4,6 +4,14 @@ import { User } from "../../users/entities/user.entity";
 import { Vehicle } from "../../vehicle/entities/vehicle.entity";
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
+
+export enum DeliveryStatus {
+  Pending = 'pending',
+  PickedUp = 'picked_up',
+  InTransit = 'in_transit',
+  Delivered = 'delivered',
+  Cancelled = 'cancelled',
+}
 @Entity('deliveries')
 export class Delivery {
   @PrimaryGeneratedColumn('uuid')

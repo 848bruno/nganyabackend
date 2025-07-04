@@ -4,6 +4,18 @@ import { Route } from "../../routes/entities/route.entity";
 import { Vehicle } from "../../vehicle/entities/vehicle.entity";
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
+
+export enum RideType {
+  Private = 'private',
+  Carpool = 'carpool',
+}
+
+export enum RideStatus {
+  Pending = 'pending',
+  Active = 'active',
+  Completed = 'completed',
+  Cancelled = 'cancelled',
+}
 @Entity('rides')
 export class Ride {
   @PrimaryGeneratedColumn('uuid')

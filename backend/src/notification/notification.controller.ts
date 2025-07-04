@@ -3,8 +3,9 @@ import { ApiOperation, ApiTags, ApiBearerAuth, ApiResponse } from '@nestjs/swagg
 import { NotificationService } from './notification.service';
 import { CreateNotificationDto, NotificationResponseDto } from './dto/create-notification.dto';
 import { UpdateNotificationDto } from './dto/update-notification.dto';
-import { UserRole } from 'src/types';
+
 import { Roles } from 'src/auth/decorators/roles.decoretor';
+import { UserRole } from 'src/users/entities/user.entity';
 
 @ApiTags('notifications')
 @ApiBearerAuth()

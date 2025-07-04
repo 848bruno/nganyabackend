@@ -2,9 +2,10 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, ForbiddenException, 
 import { PaymentService } from './payments.service';
 import { CreatePaymentDto, PaymentResponseDto } from './dto/create-payment.dto';
 import { UpdatePaymentDto } from './dto/update-payment.dto';
-import { UserRole } from 'src/types';
+
 import { Roles } from 'src/auth/decorators/roles.decoretor';
 import { ApiBearerAuth, ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
+import { UserRole } from 'src/users/entities/user.entity';
 
 @ApiTags('payments')
 @ApiBearerAuth()

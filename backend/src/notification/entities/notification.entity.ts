@@ -1,6 +1,15 @@
 import { User } from "../../users/entities/user.entity";
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
+
+
+export enum NotificationType {
+  BookingConfirmation = 'booking_confirmation',
+  DriverArrival = 'driver_arrival',
+  DeliveryUpdate = 'delivery_update',
+  General = 'general',
+  User='user'
+}
 @Entity('notifications')
 export class Notification {
   @PrimaryGeneratedColumn('uuid')

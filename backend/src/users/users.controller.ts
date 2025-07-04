@@ -3,8 +3,9 @@ import { UserService } from './users.service';
 import { CreateUserDto, UserResponseDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { Roles } from 'src/auth/decorators/roles.decoretor';
-import { UserRole } from 'src/types';
+
 import { ApiBearerAuth, ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
+import { UserRole } from './entities/user.entity';
 
 
 @ApiTags('users')

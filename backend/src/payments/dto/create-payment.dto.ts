@@ -1,5 +1,6 @@
 import { IsDate, IsEnum, IsNumber, IsOptional, IsString, IsUUID, Min } from "class-validator";
-import { PaymentMethod, PaymentStatus } from "src/types";
+import { PaymentMethod, PaymentStatus } from "../entities/payment.entity";
+
 
 export class CreatePaymentDto {
   @IsUUID()

@@ -1,6 +1,8 @@
 import { Type } from "class-transformer";
 import { IsDate, IsEnum, IsNumber, IsOptional, IsUUID, Min } from "class-validator";
-import { LocationDto, RideStatus, RideType } from "src/types";
+import { LocationDto } from "src/routes/entities/route.entity";
+import { RideStatus, RideType } from "../entities/ride.entity";
+
 
 export class CreateRideDto {
   @IsUUID()

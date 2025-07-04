@@ -5,8 +5,8 @@ import { JwtService } from '@nestjs/jwt';
 import * as Bcrypt from 'bcrypt';
 
 import { CreateAuthDto } from './dto/login.dto';
-import { User } from 'src/users/entities/user.entity';
-import { UserRole } from 'src/types';
+import { User, UserRole } from 'src/users/entities/user.entity';
+
 import { ConfigService } from '@nestjs/config';
 
 @Injectable()
@@ -75,7 +75,11 @@ export class AuthService {
 
     await this.saveRefreshToken(foundUser.id, refreshToken);
 
-    return { accessToken, refreshToken };
+    return { accessToken, refreshToken, user:{
+      id:foundUser.id,
+      email:foundUser.email,
+      role:foundUser.role as UserRole,
+    }};
   }
 
   // Sign out user

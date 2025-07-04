@@ -3,9 +3,10 @@ import { ApiBearerAuth, ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagg
 
 import { CreateDeliveryDto, DeliveryResponseDto } from './dto/create-delivery.dto';
 import { UpdateDeliveryDto } from './dto/update-delivery.dto';
-import { UserRole } from 'src/types';
+
 import { Roles } from 'src/auth/decorators/roles.decoretor';
 import { DeliveryService } from './deliveries.service';
+import { UserRole } from 'src/users/entities/user.entity';
 
 @ApiTags('deliveries')
 @ApiBearerAuth()

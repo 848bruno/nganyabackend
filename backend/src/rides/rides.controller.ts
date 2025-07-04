@@ -2,9 +2,10 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, ForbiddenException, 
 import { RideService } from './rides.service';
 import { CreateRideDto, RideResponseDto } from './dto/create-ride.dto';
 import { UpdateRideDto } from './dto/update-ride.dto';
-import { UserRole } from 'src/types';
+
 import { ApiBearerAuth, ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { Roles } from 'src/auth/decorators/roles.decoretor';
+import { UserRole } from 'src/users/entities/user.entity';
 
 @ApiTags('rides')
 @ApiBearerAuth()

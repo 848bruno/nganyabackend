@@ -2,9 +2,10 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, ForbiddenException, 
 import { VehicleService } from './vehicle.service';
 import { CreateVehicleDto, VehicleResponseDto } from './dto/create-vehicle.dto';
 import { UpdateVehicleDto } from './dto/update-vehicle.dto';
-import { UserRole } from 'src/types';
+
 import { Roles } from 'src/auth/decorators/roles.decoretor';
 import { ApiOperation, ApiTags, ApiBearerAuth, ApiResponse } from '@nestjs/swagger';
+import { UserRole } from 'src/users/entities/user.entity';
 
 @ApiTags('vehicles')
 @ApiBearerAuth()

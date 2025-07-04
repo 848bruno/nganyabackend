@@ -1,7 +1,14 @@
+import { IsNumber } from "class-validator";
 import { Driver } from "../../drivers/entities/driver.entity";
 import { Ride } from "../../rides/entities/ride.entity";
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+export class LocationDto {
+  @IsNumber()
+  lat: number;
 
+  @IsNumber()
+  lng: number;
+}
 @Entity('routes')
 export class Route {
   @PrimaryGeneratedColumn('uuid')

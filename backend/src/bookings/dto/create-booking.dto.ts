@@ -1,5 +1,6 @@
 import { IsDate, IsEnum, IsInt, IsOptional, IsUUID } from "class-validator";
-import { BookingStatus, BookingType } from "src/types";
+import { BookingStatus, BookingType } from "../entities/booking.entity";
+
 
 export class CreateBookingDto {
   @IsUUID()

@@ -1,6 +1,7 @@
 import { Type } from "class-transformer";
 import { IsDate, IsEnum, IsNumber, IsOptional, IsString, IsUUID, Min } from "class-validator";
-import { DeliveryStatus, LocationDto } from "src/types";
+import { LocationDto } from "src/routes/entities/route.entity";
+import { DeliveryStatus } from "../entities/delivery.entity";
 
 export class CreateDeliveryDto {
   @IsUUID()

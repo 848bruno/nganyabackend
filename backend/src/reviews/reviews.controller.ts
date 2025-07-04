@@ -2,9 +2,10 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, ForbiddenException, 
 import { ReviewService } from './reviews.service';
 import { CreateReviewDto, ReviewResponseDto } from './dto/create-review.dto';
 import { UpdateReviewDto } from './dto/update-review.dto';
-import { UserRole } from 'src/types';
+
 import { ApiBearerAuth, ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { Roles } from 'src/auth/decorators/roles.decoretor';
+import { UserRole } from 'src/users/entities/user.entity';
 
 @ApiTags('reviews')
 @ApiBearerAuth()

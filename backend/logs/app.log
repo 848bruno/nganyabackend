@@ -44,3 +44,24 @@
 [2025-07-03T08:11:42.675Z] [::1] ERROR: {"message":"User with email ambalebruno848@gmail.com not found","error":"Not Found","statusCode":404} - Path: /auth/signin
 [2025-07-03T11:11:03.769Z] [::1] ERROR: {"message":"User with email ambalebruno848@gmail.com not found","error":"Not Found","statusCode":404} - Path: /auth/signin
 [2025-07-03T11:34:55.333Z] [::1] ERROR: {"message":"Cannot POST /api/auth/login","error":"Not Found","statusCode":404} - Path: /api/auth/login
+[2025-07-03T17:02:41.517Z] [::1] ERROR: {"message":"Cannot POST /api/auth/login","error":"Not Found","statusCode":404} - Path: /api/auth/login
+[2025-07-03T17:07:35.548Z] [::1] ERROR: {"message":"Cannot POST /api/auth/login","error":"Not Found","statusCode":404} - Path: /api/auth/login
+[2025-07-03T17:10:07.059Z] [::1] ERROR: {"message":"Cannot POST /api/auth/login","error":"Not Found","statusCode":404} - Path: /api/auth/login
+[2025-07-03T17:13:54.898Z] [::1] ERROR: {"message":"Cannot POST /api/auth/login","error":"Not Found","statusCode":404} - Path: /api/auth/login
+[2025-07-03T17:14:02.199Z] [::1] ERROR: {"message":"Cannot POST /api/auth/login","error":"Not Found","statusCode":404} - Path: /api/auth/login
+[2025-07-03T17:14:19.627Z] [::1] ERROR: {"message":"Cannot POST /api/auth/login","error":"Not Found","statusCode":404} - Path: /api/auth/login
+[2025-07-04T05:12:37.832Z] [::1] ERROR: {"message":"Cannot POST /api/auth/login","error":"Not Found","statusCode":404} - Path: /api/auth/login
+[2025-07-04T08:07:20.260Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-04T08:07:22.123Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-04T08:07:26.954Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-04T08:07:27.074Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-04T08:07:27.147Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-04T08:07:27.222Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-04T08:07:34.932Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-04T08:11:21.898Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-04T08:11:28.644Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-04T08:18:46.645Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-04T08:18:47.974Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-04T08:18:49.689Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-04T08:18:53.380Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-04T08:18:53.975Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /

@@ -1,6 +1,20 @@
 import { Ride } from "../../rides/entities/ride.entity";
 import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
+export enum VehicleType {
+  Sedan = 'sedan',
+  SUV = 'suv',
+  Luxury = 'luxury',
+  Van = 'van',
+  Bike = 'bike',
+}
+
+export enum VehicleStatus {
+  Available = 'available',
+  InUse = 'in_use',
+  Maintenance = 'maintenance',
+}
+
 @Entity('vehicles')
 export class Vehicle {
   @PrimaryGeneratedColumn('uuid')

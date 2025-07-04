@@ -2,6 +2,19 @@ import { Booking } from "../../bookings/entities/booking.entity";
 import { User } from "../../users/entities/user.entity";
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
+
+export enum PaymentMethod {
+  Card = 'card',
+  Wallet = 'wallet',
+  Cash = 'cash',
+}
+
+
+export enum PaymentStatus {
+  Pending = 'pending',
+  Completed = 'completed',
+  Failed = 'failed',
+}
 @Entity('payments')
 export class Payment {
   @PrimaryGeneratedColumn('uuid')

@@ -1,10 +1,10 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { CreateDriverDto, DriverResponseDto } from './dto/create-driver.dto';
 import { UpdateDriverDto } from './dto/update-driver.dto';
-import { User } from 'src/users/entities/user.entity';
+import { User, UserRole } from 'src/users/entities/user.entity';
 import { Repository } from 'typeorm';
 import { Driver } from './entities/driver.entity';
-import { UserRole } from 'src/types';
+
 import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()

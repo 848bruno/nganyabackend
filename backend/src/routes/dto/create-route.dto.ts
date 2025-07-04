@@ -1,6 +1,6 @@
 import { Type } from "class-transformer";
 import { IsArray, IsDate, IsInt, IsOptional, IsUUID, Min } from "class-validator";
-import { LocationDto } from "src/types";
+import { LocationDto } from "../entities/route.entity";
 
 export class CreateRouteDto {
   @IsUUID()

@@ -2,9 +2,10 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, ForbiddenException, 
 import { DriverService } from './drivers.service';
 import { CreateDriverDto, DriverResponseDto } from './dto/create-driver.dto';
 import { UpdateDriverDto } from './dto/update-driver.dto';
-import { UserRole } from 'src/types';
+
 import { Roles } from 'src/auth/decorators/roles.decoretor';
 import { ApiBearerAuth, ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
+import { UserRole } from 'src/users/entities/user.entity';
 
 
 @ApiTags('drivers')

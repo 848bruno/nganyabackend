@@ -2,10 +2,11 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, ForbiddenException, 
 import { BookingService } from './bookings.service';
 import { BookingResponseDto, CreateBookingDto } from './dto/create-booking.dto';
 import { UpdateBookingDto } from './dto/update-booking.dto';
-import { UserRole } from 'src/types';
+
 import { ApiOperation, ApiTags, ApiBearerAuth, ApiResponse } from '@nestjs/swagger';
 import { Roles } from 'src/auth/decorators/roles.decoretor';
 import { RideService } from '../rides/rides.service';
+import { UserRole } from 'src/users/entities/user.entity';
 
 @ApiTags('bookings')
 @ApiBearerAuth()
