@@ -2,6 +2,7 @@ import {
   Body,
   Controller,
   Get,
+  HttpCode,
   Param,
   ParseUUIDPipe,
   Post,
@@ -33,10 +34,11 @@ export class AuthController {
 
   // /auth/signin
   @Public()
-  @Post('signin')
-  signIn(@Body() createAuthDto: CreateAuthDto) {
-    return this.authService.signIn(createAuthDto);
-  }
+@Post('signin')
+@HttpCode(200)
+async signIn(@Body() dto: CreateAuthDto) {
+  return await this.authService.signIn(dto);
+}
 
   // /auth/signout/:id
   @UseGuards(AtGuard)

@@ -55,7 +55,8 @@ export class AuthService {
   async signIn(createAuthDto: CreateAuthDto) {
     const foundUser = await this.profileRepository.findOne({
       where: { email: createAuthDto.email },
-      select: ['id', 'email', 'password', 'role'],
+      select: ['id', 'email', 'password', 'role', 'name', 'phone', 'createdAt', 'updatedAt'],
+
     });
 
     if (!foundUser) {
@@ -75,11 +76,16 @@ export class AuthService {
 
     await this.saveRefreshToken(foundUser.id, refreshToken);
 
-    return { accessToken, refreshToken, user:{
-      id:foundUser.id,
-      email:foundUser.email,
-      role:foundUser.role as UserRole,
-    }};
+    return { accessToken, refreshToken,   user: {
+    id: foundUser.id,
+    email: foundUser.email,
+    role: foundUser.role,
+    name: foundUser.name || foundUser.email?.split("@")[0] || "User",
+    phone: foundUser.phone || "",
+    createdAt: foundUser.createdAt,
+    updatedAt: foundUser.updatedAt,
+  },
+    };
   }
 
   // Sign out user

@@ -19,9 +19,9 @@ import { TypeOrmModule } from "@nestjs/typeorm";
         url: process.env.DATABASE_URL,
         autoLoadEntities: true,
         // use false in production and manage migrations
-        ssl: {
-          rejectUnauthorized: false,
-        },
+        // ssl: {
+        //   rejectUnauthorized: false,
+        // },
         host: configService.getOrThrow<string>('DB_HOST'),
         port: configService.getOrThrow<number>('DB_PORT'),
         username: configService.getOrThrow<string>('DB_USERNAME'),
