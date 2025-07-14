@@ -1,6 +1,6 @@
 import { MiddlewareConsumer, Module } from '@nestjs/common';
 
-import { AppController } from './app.controller';
+
 import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 
@@ -25,16 +25,20 @@ import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { AuthModule } from './auth/auth.module';
 import { SeedModule } from './seed/seed.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { HttpModule } from '@nestjs/axios';
+import { GeoModule } from './geo/geo.module';
+
 
 
 
 @Module({
-  imports: [AuthModule,SeedModule,ConfigModule,
+  imports: [AuthModule,SeedModule,ConfigModule, HttpModule,
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: '.env',
     }),
 
+    
     ThrottlerModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
@@ -60,9 +64,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     DeliveryModule,
     PaymentModule, 
     ReviewModule, 
-    NotificationModule, 
+    NotificationModule, GeoModule, 
   ],
   providers: [
+    
     {
       provide: APP_GUARD,
       useClass: AtGuard,
@@ -72,6 +77,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       useClass: ThrottlerGuard,
     },
   ],
+ 
+   
 })
 export class AppModule {
   configure(consumer: MiddlewareConsumer) {

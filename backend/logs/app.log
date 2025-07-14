@@ -118,3 +118,604 @@
 [2025-07-08T08:32:32.283Z] [::1] ERROR: {"message":"Cannot GET /admin/drivers?limit=5&page=1","error":"Not Found","statusCode":404} - Path: /admin/drivers?limit=5&page=1
 [2025-07-08T08:32:32.270Z] [::1] ERROR: {"message":"Cannot GET /admin/dashboard/stats","error":"Not Found","statusCode":404} - Path: /admin/dashboard/stats
 [2025-07-08T08:32:32.310Z] [::1] ERROR: {"message":"Cannot GET /admin/rides?limit=10&page=1","error":"Not Found","statusCode":404} - Path: /admin/rides?limit=10&page=1
+[2025-07-09T07:58:57.953Z] [::1] ERROR: {"message":"Cannot POST //auth/signin","error":"Not Found","statusCode":404} - Path: //auth/signin
+[2025-07-09T07:59:17.431Z] [::1] ERROR: {"message":"Cannot POST //auth/signin","error":"Not Found","statusCode":404} - Path: //auth/signin
+[2025-07-09T07:59:28.291Z] [::1] ERROR: {"message":"Cannot POST //auth/signin","error":"Not Found","statusCode":404} - Path: //auth/signin
+[2025-07-09T07:59:30.881Z] [::1] ERROR: {"message":"Cannot POST //auth/signin","error":"Not Found","statusCode":404} - Path: //auth/signin
+[2025-07-09T08:04:39.330Z] [::1] ERROR: {"message":"Cannot POST //auth/signin","error":"Not Found","statusCode":404} - Path: //auth/signin
+[2025-07-09T08:05:02.610Z] [::1] ERROR: {"message":"Cannot POST //auth/signin","error":"Not Found","statusCode":404} - Path: //auth/signin
+[2025-07-09T08:05:55.920Z] [::1] ERROR: {"message":"Cannot POST //auth/signin","error":"Not Found","statusCode":404} - Path: //auth/signin
+[2025-07-13T05:40:44.148Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:40:45.263Z] [::1] ERROR: {"message":"Cannot GET /?reload=0","error":"Not Found","statusCode":404} - Path: /?reload=0
+[2025-07-13T05:40:46.097Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:40:48.102Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:40:50.136Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:40:52.225Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:40:54.145Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:40:56.150Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:40:58.165Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:00.174Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:02.189Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:04.188Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:06.218Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:08.221Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:10.240Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:12.327Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:14.403Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:16.334Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:18.436Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:20.372Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:22.381Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:24.393Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:26.400Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:28.409Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:30.408Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:32.422Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:34.426Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:36.646Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:38.611Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:40.752Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:42.622Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:44.633Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:46.631Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:48.629Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:50.644Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:52.641Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:54.835Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:57.444Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:41:59.055Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:00.941Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:02.959Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:04.963Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:06.966Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:08.976Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:10.991Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:12.992Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:15.003Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:17.027Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:19.025Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:21.021Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:23.038Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:25.165Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:27.355Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:29.366Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:31.816Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:33.550Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:35.496Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:37.874Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:39.607Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:41.703Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:43.646Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:45.702Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:47.747Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:49.728Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:51.728Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:53.749Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:55.750Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:57.772Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:42:59.794Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:01.792Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:03.800Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:05.818Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:07.834Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:09.828Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:11.843Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:13.853Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:15.868Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:17.881Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:19.884Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:21.885Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:23.893Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:25.921Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:27.925Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:29.940Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:31.947Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:33.948Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:35.958Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:37.965Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:39.978Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:41.998Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:44.030Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:46.034Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:48.070Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:50.049Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:52.150Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:54.168Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:56.209Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:43:58.204Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:00.599Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:02.358Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:04.398Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:06.408Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:08.412Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:10.585Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:12.596Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:14.601Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:16.639Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:18.794Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:20.741Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:22.765Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:24.784Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:26.776Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:28.784Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:30.805Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:32.809Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:34.825Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:36.832Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:38.834Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:40.967Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:42.863Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:44.878Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:46.898Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:48.960Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:50.926Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:52.986Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:54.938Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:56.979Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:44:58.966Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:00.981Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:03.032Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:05.006Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:07.418Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:09.271Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:11.284Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:13.323Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:15.342Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:17.317Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:19.318Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:21.337Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:23.341Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:25.361Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:27.417Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:29.420Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:31.421Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:33.516Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:35.461Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:37.478Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:39.508Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:41.491Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:43.510Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:45.559Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:47.895Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:50.143Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:51.984Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:53.891Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:55.938Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:57.967Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:45:59.964Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:01.982Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:04.550Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:06.063Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:08.111Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:10.089Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:12.104Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:14.111Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:16.122Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:18.136Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:20.161Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:22.166Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:24.167Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:26.173Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:28.227Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:30.372Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:32.293Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:34.365Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:36.329Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:38.330Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:40.363Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:42.376Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:44.372Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:46.396Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:48.482Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:50.461Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:52.631Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:54.605Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:57.280Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:46:59.151Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:00.993Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:03.242Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:05.137Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:07.151Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:09.149Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:11.168Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:13.177Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:15.212Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:17.212Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:19.217Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:21.220Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:23.241Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:25.244Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:27.260Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:29.284Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:31.310Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:33.305Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:35.317Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:37.324Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:39.391Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:41.358Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:43.365Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:45.364Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:47.398Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:49.406Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:51.442Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:53.461Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:55.429Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:57.446Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:47:59.452Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:01.468Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:03.478Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:05.506Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:07.502Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:09.520Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:11.527Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:13.529Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:15.536Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:17.553Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:19.548Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:21.563Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:23.569Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:25.598Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:27.635Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:29.627Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:31.648Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:33.648Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:35.656Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:37.659Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:39.680Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:41.682Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:43.697Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:45.714Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:47.717Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:49.722Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:51.904Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:53.820Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:55.893Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:57.829Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:48:59.847Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:01.856Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:03.865Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:05.886Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:07.900Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:09.902Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:11.905Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:13.918Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:15.923Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:17.930Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:19.937Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:21.945Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:23.963Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:25.971Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:27.998Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:30.005Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:32.208Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:34.029Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:36.044Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:38.068Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:40.104Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:42.090Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:44.093Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:46.121Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:48.126Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:50.126Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:52.136Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:54.147Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:56.193Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:49:58.220Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:00.231Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:02.204Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:04.215Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:06.222Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:08.265Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:10.253Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:12.264Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:14.278Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:16.291Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:18.316Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:20.323Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:22.333Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:24.345Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:26.374Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:28.376Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:30.396Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:32.407Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:34.418Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:36.425Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:38.429Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:40.437Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:42.451Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:44.470Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:46.495Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:48.492Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:50.502Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:52.503Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:54.532Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:56.521Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:50:58.537Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:00.542Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:02.554Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:04.567Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:06.575Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:08.606Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:10.597Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:12.634Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:14.609Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:16.608Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:18.621Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:20.624Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:22.643Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:24.654Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:26.655Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:28.665Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:30.778Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:32.697Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:35.508Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:36.781Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:38.794Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:40.789Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:42.796Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:44.805Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:46.822Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:48.827Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:50.837Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:52.849Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:54.864Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:56.872Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:51:58.876Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:00.894Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:02.902Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:04.956Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:06.926Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:09.032Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:11.114Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:13.316Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:15.152Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:17.162Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:19.175Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:21.188Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:23.192Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:25.205Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:27.194Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:29.202Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:31.217Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:33.223Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:35.239Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:37.261Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:39.275Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:41.284Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:43.289Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:45.298Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:47.317Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:49.325Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:51.331Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:53.338Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:55.352Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:57.362Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:52:59.372Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:01.383Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:03.390Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:05.402Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:07.415Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:09.423Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:11.424Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:13.444Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:15.451Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:17.464Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:19.469Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:21.490Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:23.511Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:25.522Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:27.526Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:29.533Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:31.541Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:33.543Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:35.561Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:37.582Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:39.586Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:41.601Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:43.600Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:45.612Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:47.620Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:49.628Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:51.645Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:53.651Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:55.675Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:57.684Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:53:59.693Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:01.705Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:03.726Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:05.742Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:07.757Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:09.760Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:11.771Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:13.787Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:15.793Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:17.799Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:19.802Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:21.814Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:23.817Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:25.960Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:27.832Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:29.982Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:31.967Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:33.989Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:35.996Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:38.003Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:40.014Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:42.028Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:44.266Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:46.126Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:48.146Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:50.174Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:52.161Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:54.165Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:56.409Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:54:58.260Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:00.285Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:02.287Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:04.305Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:06.301Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:08.312Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:10.349Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:12.324Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:14.432Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:16.333Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:18.378Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:20.363Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:22.363Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:24.377Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:26.386Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:28.391Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:30.411Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:32.430Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:34.495Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:36.461Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:38.471Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:40.560Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:42.500Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:44.527Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:46.535Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:48.547Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:50.572Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:52.586Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:54.607Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:56.590Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:55:58.603Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T05:56:00.617Z] [::1] ERROR: {"message":"Cannot GET /","error":"Not Found","statusCode":404} - Path: /
+[2025-07-13T12:00:29.413Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-13T12:00:29.557Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-13T12:00:32.126Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-13T12:00:32.250Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=1000
+[2025-07-13T12:00:32.279Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /vehicles?page=1&limit=1000
+[2025-07-13T12:00:32.301Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /bookings?page=1&limit=1000
+[2025-07-13T12:00:32.311Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /reviews?page=1&limit=1000
+[2025-07-13T12:00:32.322Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=1000
+[2025-07-13T12:00:32.337Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=10
+[2025-07-13T12:00:32.346Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=5
+[2025-07-13T12:00:32.359Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10
+[2025-07-13T12:00:32.382Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /notifications?page=1&limit=10
+[2025-07-13T12:09:01.555Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-13T12:10:12.410Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /geo/geocode?address=nairobi
+[2025-07-13T12:11:30.914Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-13T12:11:30.924Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=1000
+[2025-07-13T12:11:30.973Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=1000
+[2025-07-13T12:11:30.960Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /vehicles?page=1&limit=1000
+[2025-07-13T12:11:30.985Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /bookings?page=1&limit=1000
+[2025-07-13T12:11:31.006Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /reviews?page=1&limit=1000
+[2025-07-13T12:11:31.105Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10
+[2025-07-13T12:11:31.024Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=10
+[2025-07-13T12:11:31.055Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=5
+[2025-07-13T12:11:31.152Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /notifications?page=1&limit=10
+[2025-07-13T12:11:33.207Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-13T12:11:33.215Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=1000
+[2025-07-13T12:11:33.255Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /bookings?page=1&limit=1000
+[2025-07-13T12:11:33.221Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /vehicles?page=1&limit=1000
+[2025-07-13T12:11:33.273Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /reviews?page=1&limit=1000
+[2025-07-13T12:11:33.243Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=1000
+[2025-07-13T12:11:33.307Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10
+[2025-07-13T12:11:33.287Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=10
+[2025-07-13T12:11:33.293Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=5
+[2025-07-13T12:11:33.314Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /notifications?page=1&limit=10
+[2025-07-13T12:11:37.258Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-13T12:11:37.286Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=1000
+[2025-07-13T12:11:37.300Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /vehicles?page=1&limit=1000
+[2025-07-13T12:11:37.329Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=1000
+[2025-07-13T12:11:37.335Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /bookings?page=1&limit=1000
+[2025-07-13T12:11:37.378Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /reviews?page=1&limit=1000
+[2025-07-13T12:11:37.456Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=10
+[2025-07-13T12:11:37.473Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=5
+[2025-07-13T12:11:37.502Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10
+[2025-07-13T12:11:37.515Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /notifications?page=1&limit=10
+[2025-07-13T12:11:52.445Z] [::1] ERROR: {"message":["password must be a string","password should not be empty"],"error":"Bad Request","statusCode":400} - Path: /auth/signin
+[2025-07-13T12:11:57.152Z] [::1] ERROR: {"message":["password must be a string","password should not be empty"],"error":"Bad Request","statusCode":400} - Path: /auth/signin
+[2025-07-13T12:12:47.215Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /geo/geocode?address=nairobi
+[2025-07-13T12:15:50.376Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /geo/geocode?address=nairobi
+[2025-07-13T12:15:51.943Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /geo/geocode?address=nairobi
+[2025-07-13T12:18:38.350Z] [::1] ERROR: Request failed with status code 400 - Path: /geo/route?start=kerugoya&end=kutus
+[2025-07-13T12:20:11.373Z] [::1] ERROR: Request failed with status code 400 - Path: /geo/route?start=Nairobi&end=mombasa
+[2025-07-13T12:46:12.214Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users
+[2025-07-13T12:47:26.660Z] [::1] ERROR: Request failed with status code 400 - Path: /geo/route?start=Nairobi&end=mombasa
+[2025-07-13T12:47:47.943Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-13T12:56:42.756Z] [::1] ERROR: {"message":"Failed to calculate route","error":"Internal Server Error","statusCode":500} - Path: /geo/route?start=Nairobi&end=mombasa
+[2025-07-13T12:56:46.563Z] [::1] ERROR: {"message":"Failed to calculate route","error":"Internal Server Error","statusCode":500} - Path: /geo/route?start=Nairobi&end=mombasa
+[2025-07-13T12:57:00.370Z] [::1] ERROR: {"message":"Failed to calculate route","error":"Internal Server Error","statusCode":500} - Path: /geo/geocode?address=kerugoya
+[2025-07-13T12:57:12.486Z] [::1] ERROR: {"message":"Failed to calculate route","error":"Internal Server Error","statusCode":500} - Path: /geo/geocode?address=nairobi
+[2025-07-13T12:57:16.388Z] [::1] ERROR: {"message":"Failed to calculate route","error":"Internal Server Error","statusCode":500} - Path: /geo/geocode?address=nairobi
+[2025-07-13T13:01:26.152Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users
+[2025-07-13T13:01:31.504Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users
+[2025-07-13T13:01:32.743Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users
+[2025-07-13T13:02:04.800Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users
+[2025-07-13T13:03:07.754Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users
+[2025-07-13T13:03:08.935Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users
+[2025-07-13T13:05:39.305Z] [::1] ERROR: Request failed with status code 403 - Path: /geo/geocode?address=nairobi
+[2025-07-13T13:06:19.791Z] [::1] ERROR: Request failed with status code 403 - Path: /geo/geocode?address=nairobi
+[2025-07-13T13:07:04.036Z] [::1] ERROR: Request failed with status code 403 - Path: /geo/geocode?address=Nairobi
+[2025-07-13T13:10:46.006Z] [::1] ERROR: Request failed with status code 401 - Path: /geo/geocode?address=Nairobi
+[2025-07-13T13:11:55.276Z] [::1] ERROR: Request failed with status code 401 - Path: /geo/geocode?address=Nairobi
+[2025-07-13T13:14:36.009Z] [::1] ERROR: Request failed with status code 401 - Path: /geo/geocode?address=nairobi
+[2025-07-13T13:27:29.946Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users
+[2025-07-13T13:33:55.737Z] [::1] ERROR: {"message":"Failed to geocode location","error":"Internal Server Error","statusCode":500} - Path: /geo/geocode?address=nairobi
+[2025-07-13T13:36:23.261Z] [::1] ERROR: {"message":"Failed to geocode location","error":"Internal Server Error","statusCode":500} - Path: /geo/geocode?address=nairobi
+[2025-07-13T13:41:20.998Z] [::1] ERROR: {"message":"Failed to geocode location","error":"Internal Server Error","statusCode":500} - Path: /geo/geocode?address=nairobi
+[2025-07-13T13:48:59.645Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users
+[2025-07-13T13:49:46.604Z] [::1] ERROR: {"message":"Failed to geocode location","error":"Internal Server Error","statusCode":500} - Path: /geo/geocode?address=nairobi
+[2025-07-13T14:07:08.835Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users
+[2025-07-13T14:07:48.310Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users
+[2025-07-13T14:08:50.388Z] [::1] ERROR: {"message":"Routing service authentication failed","error":"Internal Server Error","statusCode":500} - Path: /geo/route?start=nairobi&end=mombasa
+[2025-07-13T14:30:24.271Z] [::1] ERROR: {"message":"Routing service authentication failed","error":"Internal Server Error","statusCode":500} - Path: /geo/route?start=nairobi&end=mombasa
+[2025-07-13T14:30:29.722Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users
+[2025-07-13T14:31:39.496Z] [::1] ERROR: {"message":"Routing service authentication failed","error":"Internal Server Error","statusCode":500} - Path: /geo/route?start=nairobi&end=mombasa
+[2025-07-13T14:38:09.528Z] [::1] ERROR: {"message":"Routing service unavailable","error":"Internal Server Error","statusCode":500} - Path: /geo/route?start=nairobi&end=mombasa
+[2025-07-13T14:48:29.068Z] [::1] ERROR: {"message":"Routing service unavailable","error":"Internal Server Error","statusCode":500} - Path: /geo/route?start=nairobi&end=mombasa
+[2025-07-13T15:19:18.054Z] [::1] ERROR: {"message":"Routing service unavailable","error":"Internal Server Error","statusCode":500} - Path: /geo/route?start=nairobi&end=mombasa
+[2025-07-13T15:19:40.297Z] [::1] ERROR: {"message":"Routing service unavailable","error":"Internal Server Error","statusCode":500} - Path: /geo/route?start=nairobi&end=mombasa
+[2025-07-13T15:37:03.353Z] [::1] ERROR: {"message":"Routing service unavailable","error":"Internal Server Error","statusCode":500} - Path: /geo/route?start=nairobi&end=mombasa
+[2025-07-13T15:48:54.035Z] [::1] ERROR: {"message":"Routing service unavailable","error":"Internal Server Error","statusCode":500} - Path: /geo/route?start=nairobi&end=mombasa
+[2025-07-13T15:49:19.703Z] [::1] ERROR: {"message":"Cannot GET /.well-known/appspecific/com.chrome.devtools.json","error":"Not Found","statusCode":404} - Path: /.well-known/appspecific/com.chrome.devtools.json
+[2025-07-13T15:49:28.972Z] [::1] ERROR: {"message":"Routing service unavailable","error":"Internal Server Error","statusCode":500} - Path: /geo/route?start=nairobi&end=mombasa
+[2025-07-13T18:44:03.709Z] [::1] ERROR: {"message":"Cannot GET /geo/geocode?address=mwea","error":"Not Found","statusCode":404} - Path: /geo/geocode?address=mwea
+[2025-07-13T18:44:13.077Z] [::1] ERROR: {"message":"Cannot GET /geo/route?start=nairobi&end=mombasa","error":"Not Found","statusCode":404} - Path: /geo/route?start=nairobi&end=mombasa
+[2025-07-13T18:56:41.936Z] [::1] ERROR: Cannot read properties of undefined (reading 'pickup') - Path: /route/calculate
+[2025-07-13T19:04:42.132Z] [::1] ERROR: Cannot read properties of undefined (reading 'pickup') - Path: /route/calculate
+[2025-07-14T06:04:12.351Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=1000
+[2025-07-14T06:04:12.918Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=1000
+[2025-07-14T06:04:14.292Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /vehicles?page=1&limit=1000
+[2025-07-14T06:04:13.487Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-14T06:04:14.458Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /bookings?page=1&limit=1000
+[2025-07-14T06:04:14.585Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=10
+[2025-07-14T06:04:14.629Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=5
+[2025-07-14T06:04:14.772Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=1000
+[2025-07-14T06:04:14.828Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-14T06:04:14.980Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10
+[2025-07-14T06:04:15.165Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /notifications?page=1&limit=10
+[2025-07-14T06:04:15.355Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /reviews?page=1&limit=1000
+[2025-07-14T06:04:15.464Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=1000
+[2025-07-14T06:04:15.565Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /vehicles?page=1&limit=1000
+[2025-07-14T06:04:15.732Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /bookings?page=1&limit=1000
+[2025-07-14T06:04:15.883Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=5
+[2025-07-14T06:04:15.832Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=10
+[2025-07-14T06:04:16.022Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10
+[2025-07-14T06:04:16.192Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /notifications?page=1&limit=10
+[2025-07-14T06:04:16.413Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /reviews?page=1&limit=1000
+[2025-07-14T06:04:16.818Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=1000
+[2025-07-14T06:04:16.898Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-14T06:04:17.519Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=1000
+[2025-07-14T06:04:17.599Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /vehicles?page=1&limit=1000
+[2025-07-14T06:04:17.715Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /bookings?page=1&limit=1000
+[2025-07-14T06:04:17.858Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=10
+[2025-07-14T06:04:17.921Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=5
+[2025-07-14T06:04:18.058Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10
+[2025-07-14T06:04:18.253Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /notifications?page=1&limit=10
+[2025-07-14T06:04:18.474Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /reviews?page=1&limit=1000
+[2025-07-14T06:04:20.898Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=1000
+[2025-07-14T06:04:21.161Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-14T06:04:21.563Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=1000
+[2025-07-14T06:04:21.794Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /vehicles?page=1&limit=1000
+[2025-07-14T06:04:21.903Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /bookings?page=1&limit=1000
+[2025-07-14T06:04:22.030Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=10
+[2025-07-14T06:04:22.080Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=5
+[2025-07-14T06:04:22.225Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10
+[2025-07-14T06:04:22.341Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /notifications?page=1&limit=10
+[2025-07-14T06:04:22.519Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /reviews?page=1&limit=1000
+[2025-07-14T06:39:29.635Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-14T07:16:34.704Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-14T07:18:34.354Z] [::1] ERROR: {"message":"Routing failed: Request failed with status code 400","error":"Internal Server Error","statusCode":500} - Path: /route/calculate
