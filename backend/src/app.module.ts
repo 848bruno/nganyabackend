@@ -27,6 +27,7 @@ import { SeedModule } from './seed/seed.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { HttpModule } from '@nestjs/axios';
 import { GeoModule } from './geo/geo.module';
+import { ChatModule } from './chat/chat.module';
 
 
 
@@ -64,7 +65,7 @@ import { GeoModule } from './geo/geo.module';
     DeliveryModule,
     PaymentModule, 
     ReviewModule, 
-    NotificationModule, GeoModule, 
+    NotificationModule, GeoModule, ChatModule, 
   ],
   providers: [
     
