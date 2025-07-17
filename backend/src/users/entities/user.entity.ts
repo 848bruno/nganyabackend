@@ -1,11 +1,11 @@
-
-
+// src/users/entities/user.entity.ts
 import { Booking } from '../../bookings/entities/booking.entity';
 import { Notification } from "../../notification/entities/notification.entity";
 import { Payment } from "../../payments/entities/payment.entity";
 import { Review } from "../../reviews/entities/review.entity";
+import { Driver } from '../../drivers/entities/driver.entity'; // ⭐ NEW: Import Driver entity ⭐
 
-import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, OneToMany, OneToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm"; // ⭐ NEW: OneToOne ⭐
 
 export enum UserRole {
   Customer = 'customer',
@@ -28,7 +28,7 @@ export class User {
   password: string;
 
   @Column({ type: 'enum', enum: ['customer', 'driver', 'admin'], default: 'customer' })
-  role: string;
+  role: UserRole; // ⭐ Best practice to use the enum type directly here ⭐
 
   @Column({ nullable: true })
   phone: string;
@@ -51,6 +51,11 @@ export class User {
   @OneToMany(() => Review, review => review.driver)
   reviewsGiven: Review[];
 
-    @Column({ type: 'text', nullable: true, default: null })
+  @Column({ type: 'text', nullable: true, default: null })
   hashedRefreshToken: string | null;
+
+  @OneToMany(() => Review, review => review.user)
+  reviewsReceived: Review[];
+  @OneToOne(() => Driver, driver => driver.user)
+  driver: Driver;
 }

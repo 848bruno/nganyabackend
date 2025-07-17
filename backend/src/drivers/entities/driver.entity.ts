@@ -1,20 +1,29 @@
+// src/drivers/entities/driver.entity.ts
 import { Review } from "../../reviews/entities/review.entity";
 import { Ride } from "../..//rides/entities/ride.entity";
-import { User } from "../..//users/entities/user.entity";
+import { User } from "../..//users/entities/user.entity"; // Import User entity
 import { Vehicle } from "../..//vehicle/entities/vehicle.entity";
-import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, OneToMany, OneToOne, PrimaryColumn, UpdateDateColumn } from "typeorm"; // Note PrimaryColumn and OneToOne
 
 @Entity('drivers')
 export class Driver {
-  @PrimaryGeneratedColumn('uuid')
+  // ⭐ NEW: PrimaryColumn for the ID, and OneToOne relation to User ⭐
+  // The driver's ID is now directly linked to the user's ID
+  @PrimaryColumn({ type: 'uuid' })
   id: string;
 
-  @Column()
-  userId: string;
+  @OneToOne(() => User, user => user.driver, { onDelete: 'CASCADE' }) 
+  @JoinColumn({ name: 'id' }) 
+  user: User; 
 
-  @ManyToOne(() => User)
-  @JoinColumn({ name: 'userId' })
-  user: User;
+  @Column({ default: false })
+  isOnline: boolean;
+
+  @Column({ type: 'float', nullable: true })
+  latitude: number;
+
+  @Column({ type: 'float', nullable: true })
+  longitude: number;
 
   @Column()
   licenseNumber: string;
@@ -25,7 +34,7 @@ export class Driver {
   @Column({ nullable: true })
   vehicleId: string;
 
-  @ManyToOne(() => Vehicle, { nullable: true })
+  @OneToOne(() => Vehicle, { nullable: true }) // Assuming a driver has one vehicle
   @JoinColumn({ name: 'vehicleId' })
   vehicle: Vehicle;
 

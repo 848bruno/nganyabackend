@@ -1277,3 +1277,307 @@
 [2025-07-15T10:55:51.023Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10&q=admin%40taxiapp.com
 [2025-07-15T10:55:53.039Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10&q=admin%40taxiapp.com
 [2025-07-15T10:55:57.076Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10&q=admin%40taxiapp.com
+[2025-07-15T11:20:28.739Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-15T11:20:29.215Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10&q=
+[2025-07-15T11:20:30.768Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10&q=
+[2025-07-15T11:20:32.888Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10&q=
+[2025-07-15T11:20:36.935Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10&q=
+[2025-07-15T11:20:41.163Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10&q=admin%40taxiapp.com
+[2025-07-15T11:20:42.256Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10&q=admin%40taxiapp.com
+[2025-07-15T11:20:44.292Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10&q=admin%40taxiapp.com
+[2025-07-15T11:20:48.333Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10&q=admin%40taxiapp.com
+[2025-07-15T11:31:58.029Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /vehicles?limit=1
+[2025-07-15T11:56:46.450Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?limit=10
+[2025-07-15T11:56:46.679Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /vehicles?limit=1
+[2025-07-15T11:56:47.767Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /vehicles?limit=1
+[2025-07-15T11:56:47.804Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?limit=10
+[2025-07-15T11:56:48.259Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /vehicles?limit=1
+[2025-07-15T11:56:48.299Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?limit=10
+[2025-07-15T11:58:01.596Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-15T11:58:08.728Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T11:58:09.800Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T12:38:54.337Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T12:40:02.505Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T12:41:19.554Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T12:42:07.583Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T12:42:24.323Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-15T13:16:40.227Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-15T13:29:22.775Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T13:29:25.587Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T13:29:31.403Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T13:47:36.959Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-15T13:47:38.896Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T14:07:45.211Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T14:08:08.562Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T14:09:45.074Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T14:10:23.564Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-15T14:10:33.506Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T14:10:34.086Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T14:10:35.023Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T14:41:09.817Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-15T15:55:29.993Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T15:55:30.616Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T15:55:31.263Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T15:55:36.164Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-15T15:55:58.211Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T16:14:52.443Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T18:51:23.054Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-15T18:53:57.037Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /deliveries?page=1&limit=10
+[2025-07-16T06:18:21.165Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T07:39:55.982Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T07:40:48.271Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T08:00:06.514Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-16T08:00:06.546Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T08:51:41.226Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T10:56:03.723Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T10:56:54.072Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T10:57:49.309Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T10:58:00.915Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T10:58:18.605Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T10:58:33.003Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T10:58:43.132Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T10:59:09.578Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T10:59:25.009Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T10:59:56.645Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T11:00:02.429Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T11:00:06.141Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T11:00:11.615Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T11:00:15.677Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T11:00:19.581Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T11:00:25.172Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T11:00:29.799Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T11:00:34.960Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T11:01:14.333Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T11:46:52.315Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-16T11:48:11.495Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=10&q=
+[2025-07-16T11:48:13.003Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=10&q=
+[2025-07-16T11:48:15.341Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=10&q=
+[2025-07-16T11:48:19.506Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=10&q=
+[2025-07-16T11:56:19.822Z] [::1] ERROR: {"message":["name must be a string","password must be a string"],"error":"Bad Request","statusCode":400} - Path: /users
+[2025-07-16T11:56:41.373Z] [::1] ERROR: {"message":["name must be a string","password must be a string"],"error":"Bad Request","statusCode":400} - Path: /users
+[2025-07-16T11:59:33.515Z] [::1] ERROR: {"message":["name must be a string","password must be a string"],"error":"Bad Request","statusCode":400} - Path: /users
+[2025-07-16T12:00:41.849Z] [::1] ERROR: {"message":["userId must be a UUID","licenseNumber must be a string"],"error":"Bad Request","statusCode":400} - Path: /drivers
+[2025-07-16T12:15:42.989Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-16T12:15:43.051Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /vehicles?page=1&limit=1000
+[2025-07-16T12:15:43.103Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=1000
+[2025-07-16T12:15:43.111Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=1000
+[2025-07-16T12:15:43.041Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=5
+[2025-07-16T12:15:43.029Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=10
+[2025-07-16T12:15:43.562Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /bookings?page=1&limit=1000
+[2025-07-16T12:15:43.665Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /notifications?page=1&limit=10
+[2025-07-16T12:15:43.612Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /reviews?page=1&limit=1000
+[2025-07-16T12:15:43.647Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10
+[2025-07-16T12:15:44.474Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-16T12:15:44.528Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=10
+[2025-07-16T12:15:44.622Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=5
+[2025-07-16T12:15:44.632Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=1000
+[2025-07-16T12:15:44.656Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=1000
+[2025-07-16T12:15:44.671Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /vehicles?page=1&limit=1000
+[2025-07-16T12:15:45.776Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /bookings?page=1&limit=1000
+[2025-07-16T12:15:45.838Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /reviews?page=1&limit=1000
+[2025-07-16T12:15:45.862Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10
+[2025-07-16T12:15:45.925Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /notifications?page=1&limit=10
+[2025-07-16T12:15:47.496Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-16T12:15:47.514Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=10
+[2025-07-16T12:15:47.523Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=1000
+[2025-07-16T12:15:47.552Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=5
+[2025-07-16T12:15:47.570Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=1000
+[2025-07-16T12:15:47.606Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /vehicles?page=1&limit=1000
+[2025-07-16T12:15:48.900Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /bookings?page=1&limit=1000
+[2025-07-16T12:15:49.497Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /reviews?page=1&limit=1000
+[2025-07-16T12:15:50.314Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10
+[2025-07-16T12:15:50.458Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /notifications?page=1&limit=10
+[2025-07-16T12:16:17.489Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T12:19:36.600Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T12:19:36.861Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T12:20:30.556Z] [::1] ERROR: {"message":"Cannot GET /drivers/undefined/stats","error":"Not Found","statusCode":404} - Path: /drivers/undefined/stats
+[2025-07-16T12:22:35.719Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/rides?limit=10&status=pending","error":"Not Found","statusCode":404} - Path: /drivers/me/rides?limit=10&status=pending
+[2025-07-16T12:22:35.767Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:22:35.751Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/vehicle","error":"Not Found","statusCode":404} - Path: /drivers/me/vehicle
+[2025-07-16T12:22:40.382Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:22:40.388Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/vehicle","error":"Not Found","statusCode":404} - Path: /drivers/me/vehicle
+[2025-07-16T12:22:40.400Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/rides?limit=10&status=pending","error":"Not Found","statusCode":404} - Path: /drivers/me/rides?limit=10&status=pending
+[2025-07-16T12:22:42.999Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:22:43.006Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/vehicle","error":"Not Found","statusCode":404} - Path: /drivers/me/vehicle
+[2025-07-16T12:22:43.014Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/rides?limit=10&status=pending","error":"Not Found","statusCode":404} - Path: /drivers/me/rides?limit=10&status=pending
+[2025-07-16T12:24:31.575Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/vehicle","error":"Not Found","statusCode":404} - Path: /drivers/me/vehicle
+[2025-07-16T12:24:31.583Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:24:31.882Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers?limit=10&status=pending
+[2025-07-16T12:24:37.194Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:24:38.265Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/vehicle","error":"Not Found","statusCode":404} - Path: /drivers/me/vehicle
+[2025-07-16T12:24:38.381Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers?limit=10&status=pending
+[2025-07-16T12:24:51.820Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers
+[2025-07-16T12:24:52.771Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:24:53.495Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers?limit=10&status=pending
+[2025-07-16T12:26:23.450Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:26:23.691Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers
+[2025-07-16T12:26:24.078Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers?limit=10&status=pending
+[2025-07-16T12:27:19.002Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers?limit=10&status=pending
+[2025-07-16T12:27:19.783Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers
+[2025-07-16T12:27:20.519Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:27:39.884Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers?limit=10&status=pending
+[2025-07-16T12:27:39.947Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:27:39.915Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers
+[2025-07-16T12:27:50.501Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:27:50.617Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers?limit=10&status=pending
+[2025-07-16T12:27:50.676Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers
+[2025-07-16T12:27:54.464Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:27:54.500Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers
+[2025-07-16T12:27:54.519Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers?limit=10&status=pending
+[2025-07-16T12:29:22.450Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers?limit=10&status=pending
+[2025-07-16T12:29:23.380Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers
+[2025-07-16T12:29:23.799Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:29:26.866Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:29:27.061Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers
+[2025-07-16T12:29:27.147Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers?limit=10&status=pending
+[2025-07-16T12:30:07.128Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-16T12:32:23.318Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:32:23.396Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers
+[2025-07-16T12:32:23.429Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?limit=10&status=pending
+[2025-07-16T12:32:25.715Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers
+[2025-07-16T12:32:26.740Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?limit=10&status=pending
+[2025-07-16T12:32:26.816Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:32:30.447Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers
+[2025-07-16T12:32:30.478Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?limit=10&status=pending
+[2025-07-16T12:32:30.537Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:33:03.537Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-16T12:33:03.770Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers
+[2025-07-16T12:33:04.070Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:33:04.192Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?limit=10&status=pending
+[2025-07-16T12:37:43.348Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?limit=10&status=pending
+[2025-07-16T12:37:43.854Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers
+[2025-07-16T12:37:43.893Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T12:37:57.869Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-16T12:38:00.050Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-16T13:56:04.120Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-16T13:56:04.984Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers
+[2025-07-16T13:56:05.109Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?limit=10&status=pending
+[2025-07-16T13:56:05.161Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T13:56:26.613Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers
+[2025-07-16T13:56:26.630Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?limit=10&status=pending
+[2025-07-16T13:56:26.638Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-16T13:56:26.654Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T13:56:33.113Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-16T13:56:33.125Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-16T13:56:34.731Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-16T14:50:01.309Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-16T14:50:37.556Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-16T14:50:37.608Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-16T14:50:38.184Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers
+[2025-07-16T14:50:38.288Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?limit=10&status=pending
+[2025-07-16T14:50:38.939Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T14:54:54.105Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T14:54:54.262Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?limit=10&status=pending
+[2025-07-16T14:54:54.203Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers
+[2025-07-16T14:54:56.457Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-16T14:54:56.482Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers
+[2025-07-16T14:54:56.495Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?limit=10&status=pending
+[2025-07-17T01:12:32.758Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-17T01:12:32.778Z] [::1] ERROR: {"message":"Cannot GET /drivers/me/stats","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-17T01:12:32.803Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers
+[2025-07-17T01:12:32.809Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?limit=10&status=pending
+[2025-07-17T01:50:58.835Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T01:50:58.953Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T01:50:59.494Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T01:55:50.587Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T01:55:52.181Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T01:59:14.857Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T02:57:07.037Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T03:52:00.441Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T03:52:00.548Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T03:52:23.169Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T03:52:23.233Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T03:52:25.080Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T03:53:54.589Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T03:53:56.525Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T05:59:05.853Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=10&q=
+[2025-07-17T06:05:06.641Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=10&q=
+[2025-07-17T06:05:30.058Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-17T06:05:34.402Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=10&q=
+[2025-07-17T06:06:33.041Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=10&q=
+[2025-07-17T06:06:51.346Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=10&q=
+[2025-07-17T06:06:55.643Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=10&q=
+[2025-07-17T07:23:05.127Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers
+[2025-07-17T07:23:05.248Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers?limit=10&status=pending
+[2025-07-17T07:23:05.384Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-17T07:37:40.943Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-17T07:37:41.839Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers
+[2025-07-17T07:37:42.410Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers?limit=10&status=pending
+[2025-07-17T08:16:35.735Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-17T08:16:56.324Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-17T08:16:56.703Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers
+[2025-07-17T08:16:57.104Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers?limit=10&status=pending
+[2025-07-17T08:16:57.239Z] [::1] ERROR: {"message":"Driver profile not found.","error":"Not Found","statusCode":404} - Path: /drivers/me/stats
+[2025-07-17T08:17:09.750Z] [::1] ERROR: {"message":"Driver profile not found.","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T08:17:09.756Z] [::1] ERROR: {"message":"Driver profile not found.","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T08:17:10.197Z] [::1] ERROR: {"message":"Driver profile not found.","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T08:20:00.174Z] [::1] ERROR: {"message":"Driver profile not found.","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T08:24:43.637Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T08:24:43.677Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T08:24:54.948Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T08:24:56.056Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T08:24:56.736Z] [::1] ERROR: {"message":"Cannot POST /drivers/location","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T08:27:42.034Z] [::1] ERROR: {"message":"Driver profile not found.","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T08:27:42.041Z] [::1] ERROR: {"message":"Driver profile not found.","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T08:27:45.794Z] [::1] ERROR: {"message":"Driver profile not found.","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T08:27:46.001Z] [::1] ERROR: {"message":"Driver profile not found.","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T08:27:47.666Z] [::1] ERROR: {"message":"Driver profile not found.","error":"Not Found","statusCode":404} - Path: /drivers/location
+[2025-07-17T08:44:09.778Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers/location
+[2025-07-17T08:44:09.952Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers/location
+[2025-07-17T08:44:26.376Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-17T08:44:26.421Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers
+[2025-07-17T08:44:26.545Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?limit=10&status=pending
+[2025-07-17T08:44:26.604Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers/me/stats
+[2025-07-17T08:44:26.860Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers/location
+[2025-07-17T08:44:26.890Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers/location
+[2025-07-17T08:44:28.297Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers/location
+[2025-07-17T08:44:55.080Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10&q=
+[2025-07-17T08:44:56.368Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10&q=
+[2025-07-17T08:44:57.775Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=10&q=
+[2025-07-17T08:44:58.986Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=10&q=
+[2025-07-17T08:45:01.017Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=10&q=
+[2025-07-17T08:45:05.060Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=10&q=
+[2025-07-17T08:47:38.479Z] [::1] ERROR: {"message":["rating must be a number conforming to the specified constraints"],"error":"Bad Request","statusCode":400} - Path: /drivers/9164361b-acb3-4b51-9864-728f4c6d5f6f
+[2025-07-17T08:48:13.074Z] [::1] ERROR: {"message":["rating must be a number conforming to the specified constraints"],"error":"Bad Request","statusCode":400} - Path: /drivers/9164361b-acb3-4b51-9864-728f4c6d5f6f
+[2025-07-17T09:42:38.904Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-17T09:43:00.366Z] [::1] ERROR: {"message":"Invalid credentials","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-17T09:43:20.326Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-17T09:43:20.386Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers
+[2025-07-17T09:43:20.411Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers?limit=10&status=pending
+[2025-07-17T09:45:16.523Z] [::1] ERROR: {"message":["rating must be a number conforming to the specified constraints"],"error":"Bad Request","statusCode":400} - Path: /drivers/9164361b-acb3-4b51-9864-728f4c6d5f6f
+[2025-07-17T09:52:07.089Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-17T09:52:07.141Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers
+[2025-07-17T09:52:07.162Z] [::1] ERROR: {"message":"You do not have permission to perform this action","error":"Forbidden","statusCode":403} - Path: /drivers?limit=10&status=pending
+[2025-07-17T09:52:24.123Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-17T09:52:50.524Z] [::1] ERROR: {"message":"Invalid credentials","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-17T09:53:35.632Z] [::1] ERROR: {"message":"Invalid credentials","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-17T09:53:44.844Z] [::1] ERROR: {"message":"Invalid credentials","error":"Not Found","statusCode":404} - Path: /auth/signin
+[2025-07-17T09:55:09.832Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-17T10:10:42.627Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-17T10:10:42.928Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers/me/stats
+[2025-07-17T10:10:42.976Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?limit=10&status=pending
+[2025-07-17T10:10:42.948Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers
+[2025-07-17T10:11:52.418Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers/location
+[2025-07-17T10:11:52.734Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers/location
+[2025-07-17T10:11:52.832Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers/location
+[2025-07-17T10:11:54.239Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers/location
+[2025-07-17T10:12:01.814Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers/location
+[2025-07-17T10:12:46.700Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-17T10:12:46.751Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers/me/stats
+[2025-07-17T10:12:46.769Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers
+[2025-07-17T10:12:47.057Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?limit=10&status=pending
+[2025-07-17T10:12:47.154Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /vehicles?page=1&limit=1000
+[2025-07-17T10:12:47.209Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /bookings?page=1&limit=1000
+[2025-07-17T10:12:47.235Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=1000
+[2025-07-17T10:12:47.258Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=1000
+[2025-07-17T10:12:47.421Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /reviews?page=1&limit=1000
+[2025-07-17T10:12:47.438Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-17T10:12:47.475Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides?page=1&limit=10
+[2025-07-17T10:12:47.661Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /drivers?page=1&limit=5
+[2025-07-17T10:12:48.051Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=10
+[2025-07-17T10:12:47.892Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /notifications?page=1&limit=10
+[2025-07-17T10:44:58.493Z] [::1] ERROR: {"message":"Cannot GET /auth/profile","error":"Not Found","statusCode":404} - Path: /auth/profile
+[2025-07-17T10:49:35.787Z] [::1] ERROR: {"message":"Cannot GET /geo/suggest-drivers?pickup=kutus&destination=kagio","error":"Not Found","statusCode":404} - Path: /geo/suggest-drivers?pickup=kutus&destination=kagio
+[2025-07-17T10:49:52.515Z] [::1] ERROR: {"message":"Cannot GET /geo/suggest-drivers?pickup=kutus&destination=kag","error":"Not Found","statusCode":404} - Path: /geo/suggest-drivers?pickup=kutus&destination=kag
+[2025-07-17T10:49:53.667Z] [::1] ERROR: {"message":"Cannot GET /geo/suggest-drivers?pickup=kutus&destination=kagi","error":"Not Found","statusCode":404} - Path: /geo/suggest-drivers?pickup=kutus&destination=kagi
+[2025-07-17T10:49:54.251Z] [::1] ERROR: {"message":"Cannot GET /geo/suggest-drivers?pickup=kutus&destination=kagio","error":"Not Found","statusCode":404} - Path: /geo/suggest-drivers?pickup=kutus&destination=kagio

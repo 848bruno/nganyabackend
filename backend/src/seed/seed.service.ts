@@ -5,7 +5,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import * as bcrypt from 'bcrypt';
 import { faker } from '@faker-js/faker';
-import { User } from 'src/users/entities/user.entity';
+import { User, UserRole } from 'src/users/entities/user.entity'; // ⭐ IMPORT UserRole ⭐
 
 @Injectable()
 export class UserSeedService {
@@ -22,7 +22,7 @@ export class UserSeedService {
       name: 'Admin User',
       email: 'admin@taxiapp.com',
       password: await bcrypt.hash('admin123', 10),
-      role: 'admin',
+      role: UserRole.Admin, // ⭐ FIXED: Use UserRole.Admin ⭐
       phone: faker.phone.number(),
     });
     users.push(admin);
@@ -33,7 +33,7 @@ export class UserSeedService {
         name: faker.person.fullName(),
         email: faker.internet.email(),
         password: await bcrypt.hash('driver123', 10),
-        role: 'driver',
+        role: UserRole.Driver, // ⭐ FIXED: Use UserRole.Driver ⭐
         phone: faker.phone.number(),
       });
       users.push(driver);
@@ -45,7 +45,7 @@ export class UserSeedService {
         name: faker.person.fullName(),
         email: faker.internet.email(),
         password: await bcrypt.hash('customer123', 10),
-        role: 'customer',
+        role: UserRole.Customer, // ⭐ FIXED: Use UserRole.Customer ⭐
         phone: faker.phone.number(),
       });
       users.push(customer);
@@ -58,8 +58,8 @@ export class UserSeedService {
       total: users.length,
       sampleLogin: {
         admin: { email: 'admin@taxiapp.com', password: 'admin123' },
-        driver: { email: users.find(u => u.role === 'driver')?.email, password: 'driver123' },
-        customer: { email: users.find(u => u.role === 'customer')?.email, password: 'customer123' },
+        driver: { email: users.find(u => u.role === UserRole.Driver)?.email, password: 'driver123' }, // ⭐ Also update here ⭐
+        customer: { email: users.find(u => u.role === UserRole.Customer)?.email, password: 'customer123' }, // ⭐ And here ⭐
       },
     };
   }
