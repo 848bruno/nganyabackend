@@ -1,27 +1,77 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, ForbiddenException, Req } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, ForbiddenException, Req, Query } from '@nestjs/common';
 import { RoutesService } from './routes.service';
-import { CreateRouteDto, RouteResponseDto } from './dto/create-route.dto';
-import { UpdateRouteDto } from './dto/update-route.dto';
-
-import { ApiBearerAuth, ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
+import { CreateRouteDto, RouteResponseDto, UpdateRouteDto } from './dto/create-route.dto'; // Ensure UpdateRouteDto is imported
+import { ApiBearerAuth, ApiTags, ApiOperation, ApiResponse, ApiBody } from '@nestjs/swagger';
 import { Roles } from 'src/auth/decorators/roles.decoretor';
 import { UserRole } from 'src/users/entities/user.entity';
-
+import { LocationService } from 'src/geo/geo.service'; // Re-add LocationService as it's used in the new calculateRoute logic
 
 @ApiTags('routes')
 @ApiBearerAuth()
-@Controller('routes')
-export class RouteController{
-  constructor(private readonly routeService: RoutesService) {
-    
-  }
+@Controller('route') // Controller path is 'route'
+export class RouteController { // Changed class name to RouteController
+  constructor(
+    private readonly routeService: RoutesService, // Injected RoutesService
+    private readonly locationService: LocationService, // Re-inject LocationService
+  ) {}
 
-   private checkRole(req: any, allowedRoles: UserRole[]) {
+  private checkRole(req: any, allowedRoles: UserRole[]) {
     if (!req.user || !allowedRoles.includes(req.user.role)) {
       throw new ForbiddenException('You do not have permission to perform this action');
     }
- 
-   }
+  }
+
+  @Post('calculate')
+  @ApiOperation({ summary: 'Calculate route between two addresses' })
+  @ApiBody({
+    schema: {
+      example: {
+        pickup: 'Nairobi',
+        dropoff: 'Mombasa'
+      }
+    }
+  })
+  async calculateRoute(@Body() body: { pickup: string; dropoff: string }) {
+    // 1. Geocode both addresses
+    const [start, end] = await Promise.all([
+      this.locationService.geocode(body.pickup),
+      this.locationService.geocode(body.dropoff)
+    ]);
+
+    // 2. Get route using lon, lat pairs (OSRM expects longitude,latitude)
+    const route = await this.locationService.getRoute(
+      [start.lon, start.lat],
+      [end.lon, end.lat]
+    );
+
+    // 3. Return enriched route response
+    return {
+      start,
+      end,
+      distance: route.distance, // meters
+      duration: route.duration, // seconds
+      geometry: route.geometry, // GeoJSON LineString
+      instructions: route.legs[0].steps.map(step => ({
+        distance: step.distance,
+        duration: step.duration,
+        instruction: step.maneuver.instruction,
+        location: step.maneuver.location
+      }))
+    };
+  }
+
+  @Post('geocode') // New endpoint for geocoding
+  @ApiOperation({ summary: 'Geocode an address to coordinates' })
+  @ApiBody({
+    schema: {
+      example: {
+        address: 'Nairobi, Kenya'
+      }
+    }
+  })
+  async geocodeAddress(@Body() body: { address: string }) {
+    return this.locationService.geocode(body.address);
+  }
 
   @Post()
   @Roles(UserRole.Driver)

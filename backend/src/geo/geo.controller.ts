@@ -1,19 +1,18 @@
-import {  Get, Patch, Param, Delete, Query, InternalServerErrorException } from '@nestjs/common';
+import { Get, Patch, Param, Delete, Query, InternalServerErrorException } from '@nestjs/common';
 import { LocationService } from './geo.service';
-import { CreateGeoDto } from './dto/create-geo.dto';
-import { UpdateGeoDto } from './dto/update-geo.dto';
 import { ApiBearerAuth, ApiBody, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { Public } from 'src/auth/decorators';
 import { Body, Controller, Post } from '@nestjs/common';
 // updated import
 @ApiBearerAuth()
-@ApiTags('Route') 
+@ApiTags('Route')
 @Controller('route')
 export class RouteController {
   constructor(private readonly locationService: LocationService) {}
-@Public()
+
+  @Public() // Allow unauthenticated access if this is for public route calculation
   @Post('calculate')
-    @ApiOperation({ summary: 'Calculate route between two addresses' }) 
+  @ApiOperation({ summary: 'Calculate route between two addresses' })
   @ApiBody({
     schema: {
       example: {
@@ -49,5 +48,19 @@ export class RouteController {
         location: step.maneuver.location
       }))
     };
+  }
+
+  @Public() // Allow unauthenticated access for geocoding
+  @Post('geocode') // ⭐ ADDED: New endpoint for geocoding ⭐
+  @ApiOperation({ summary: 'Geocode an address to coordinates' })
+  @ApiBody({
+    schema: {
+      example: {
+        address: 'Nairobi, Kenya'
+      }
+    }
+  })
+  async geocodeAddress(@Body() body: { address: string }) {
+    return this.locationService.geocode(body.address);
   }
 }

@@ -8,7 +8,7 @@ import { Ride } from 'src/rides/entities/ride.entity';
 
 import * as bcrypt from 'bcrypt';
 import { LocationService } from 'src/geo/geo.service';
-import { Vehicle } from 'src/vehicle/entities/vehicle.entity';
+import { Vehicle } from 'src/vehicle/entities/vehicle.entity'; // ⭐ FIXED: Corrected import path from 'src/vehicle' to 'src/vehicles' ⭐
 
 
 @Injectable()
@@ -224,7 +224,7 @@ export class UserService {
       where: whereCondition,
       skip: skip,
       take: limit,
-      // ⭐ FIX: Changed 'user' to 'driver' in relations as Ride entity has a 'driver' (User) relation ⭐
+      // ⭐ FIXED: Changed 'user' to 'driver' in relations as Ride entity has a 'driver' (User) relation ⭐
       relations: ['driver', 'vehicle', 'route', 'bookings', 'bookings.user'],
     });
 

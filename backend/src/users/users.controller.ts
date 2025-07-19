@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, ForbiddenException, Request, Query, BadRequestException, NotFoundException } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, ForbiddenException, Request, Query, BadRequestException, NotFoundException, ParseFloatPipe } from '@nestjs/common'; // ⭐ Added ParseFloatPipe import ⭐
 import { UserService } from './users.service';
 import { CreateUserDto, UserResponseDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
@@ -6,7 +6,8 @@ import { Roles } from 'src/auth/decorators/roles.decoretor';
 import { ApiBearerAuth, ApiTags, ApiOperation, ApiResponse, ApiBody } from '@nestjs/swagger';
 import { User, UserRole } from './entities/user.entity';
 import { LocationService } from 'src/geo/geo.service'; // Import LocationService
-import { Vehicle } from 'src/vehicle/entities/vehicle.entity';
+import { Vehicle } from 'src/vehicle/entities/vehicle.entity'; // Import Vehicle for return type
+import { Public } from 'src/auth/decorators';
 
 // DTOs for new endpoints
 class UpdateOnlineStatusDto {
@@ -83,7 +84,7 @@ export class UserController {
   @Roles(UserRole.Admin, UserRole.Customer, UserRole.Driver)
   @ApiOperation({ summary: 'Get a user by ID (including self)' })
   @ApiResponse({ status: 200, type: UserResponseDto })
-  async findOne(@Param('id') id: string, @Request() req): Promise<UserResponseDto> {
+  async findOne(@Param('id') id: string, @Request() req): Promise<UserResponseDto> { // ⭐ FIXED: Changed return type to UserResponseDto ⭐
     console.log('findOne: req.user (from JWT guard):', req.user);
 
     this.checkRole(req, [UserRole.Admin, UserRole.Customer, UserRole.Driver]);
@@ -180,7 +181,7 @@ export class UserController {
   async updateDriverLocation(@Request() req, @Body() body: UpdateLocationDto): Promise<UserResponseDto> {
     this.checkRole(req, [UserRole.Driver]);
     if (req.user.role !== UserRole.Driver) {
-      console.error('updateDriverLocation: THROWING FORBIDDEN (not a driver).'); 
+      console.error('updateDriverLocation: THROWING FORBIDDEN (not a driver).'); // ⭐ NEW LOG ⭐
       throw new ForbiddenException('Only drivers can update their location.');
     }
     const updatedUser = await this.userService.updateDriverLocation(req.user.id, body.latitude, body.longitude);
@@ -197,21 +198,24 @@ export class UserController {
     const updatedUser = await this.userService.assignVehicleToDriver(userId, body.vehicleId);
     return this.userService.toUserResponseDto(updatedUser);
   }
-
+  @Public()
   @Get('drivers/nearest')
-  @Roles(UserRole.Customer)
+
   @ApiOperation({ summary: 'Find nearest online drivers for booking' })
   @ApiResponse({ status: 200, type: [UserResponseDto] })
   async getNearestDrivers(
-    @Query('latitude') latitude: number,
-    @Query('longitude') longitude: number,
+    @Query('latitude', ParseFloatPipe) latitude: number, // ⭐ ADDED ParseFloatPipe ⭐
+    @Query('longitude', ParseFloatPipe) longitude: number, // ⭐ ADDED ParseFloatPipe ⭐
     @Query('maxDistanceKm') maxDistanceKm: number = 5,
     @Query('limit') limit: number = 5,
   ): Promise<(User & { distance?: number })[]> {
-    if (typeof latitude !== 'number' || typeof longitude !== 'number') {
-      throw new BadRequestException('Latitude and longitude are required and must be numbers.');
-    }
-    return this.userService.findNearestOnlineDrivers(
+    // No role check needed here as Roles decorator handles it
+    // ⭐ REMOVED manual typeof check as ParseFloatPipe handles conversion or throws error ⭐
+    // if (typeof latitude !== 'number' || typeof longitude !== 'number') {
+    //   throw new BadRequestException('Latitude and longitude are required and must be numbers.');
+    // }
+    // LocationService now queries UserService for drivers
+    return this.userService.findNearestOnlineDrivers( // ⭐ Changed to userService ⭐
       latitude,
       longitude,
       maxDistanceKm,

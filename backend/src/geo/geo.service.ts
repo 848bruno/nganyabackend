@@ -28,16 +28,33 @@ export class LocationService {
         }),
       );
 
+      // Log the full Nominatim response for debugging
+      console.log(`Nominatim response for address "${address}":`, response.data);
+
       if (!response.data?.length) {
-        throw new Error('Address not found');
+        // If no results are found, throw a specific error
+        throw new Error(`No coordinates found for address: "${address}"`);
       }
 
-      return {
-        lat: parseFloat(response.data[0].lat),
-        lon: parseFloat(response.data[0].lon),
-      };
-    } catch (error) {
-      throw new InternalServerErrorException('Geocoding failed: ' + error.message);
+      const lat = parseFloat(response.data[0].lat);
+      const lon = parseFloat(response.data[0].lon);
+
+      // ⭐ NEW: Validate parsed coordinates ⭐
+      if (isNaN(lat) || isNaN(lon)) {
+        throw new Error(`Invalid coordinates received from Nominatim for address "${address}": lat=${response.data[0].lat}, lon=${response.data[0].lon}`);
+      }
+
+      return { lat, lon };
+    } catch (error: any) { // Explicitly type error as 'any' for flexible access
+      // Extract a more detailed error message
+      const errorMessage =
+        error.response?.data?.message || // Axios error response from server
+        error.message || // Standard error message
+        'Unknown geocoding error';
+
+      console.error(`Geocoding failed for address "${address}":`, errorMessage, error); // Log full error object
+      // Re-throw as an InternalServerErrorException to be caught by the controller
+      throw new InternalServerErrorException('Geocoding failed: ' + errorMessage);
     }
   }
 
@@ -62,8 +79,13 @@ export class LocationService {
       }
 
       return response.data.routes[0];
-    } catch (error) {
-      throw new InternalServerErrorException('Routing failed: ' + error.message);
+    } catch (error: any) { // Explicitly type error as 'any'
+      const errorMessage =
+        error.response?.data?.message ||
+        error.message ||
+        'Unknown routing error';
+      console.error('Routing failed:', errorMessage, error);
+      throw new InternalServerErrorException('Routing failed: ' + errorMessage);
     }
   }
 
