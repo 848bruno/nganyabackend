@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, ForbiddenException, Req } from '@nestjs/common';
-import { RouteService } from './routes.service';
+import { RoutesService } from './routes.service';
 import { CreateRouteDto, RouteResponseDto } from './dto/create-route.dto';
 import { UpdateRouteDto } from './dto/update-route.dto';
 
@@ -12,7 +12,7 @@ import { UserRole } from 'src/users/entities/user.entity';
 @ApiBearerAuth()
 @Controller('routes')
 export class RouteController{
-  constructor(private readonly routeService: RouteService) {
+  constructor(private readonly routeService: RoutesService) {
     
   }
 

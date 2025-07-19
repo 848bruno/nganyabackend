@@ -43,10 +43,15 @@ export class BookingService {
     if (!ride) {
       throw new BadRequestException('Ride not found');
     }
+
     if (createBookingDto.type === 'ride' && ride.type === 'carpool' && createBookingDto.seatNumber) {
+      // ⭐ FIX: Check if ride.routeId is not null before using it in the where clause ⭐
+      if (!ride.routeId) {
+        throw new BadRequestException('Carpool ride must have an associated route.');
+      }
       const route = await this.rideRepository.manager.getRepository(Route).findOne({ where: { id: ride.routeId } });
       if (route && createBookingDto.seatNumber > route.availableSeats) {
-        throw new BadRequestException('Seat number exceeds available seats');
+        throw new BadRequestException('Seat number exceeds available seats for this route.');
       }
     }
     const booking = this.bookingRepository.create(createBookingDto);

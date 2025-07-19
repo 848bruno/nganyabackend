@@ -100,24 +100,19 @@ export class ChatService {
   async getBotResponse(userMessage: string): Promise<string> {
     try {
       // Construct the full prompt by combining the context and the user's message
-      // The context acts as a "system message" or a detailed instruction set
+     
       const fullPrompt = `${this.chatbotContext}\nUser's Question: ${userMessage}`;
 
       const response = await axios.post(
         this.API_URL,
         {
-          // Using a model that supports a 'system' role or is good at following instructions
-          // Mistral-7b-instruct is a good choice for instruction following.
+        
           model: 'mistralai/mistral-7b-instruct',
           messages: [
-            // The 'user' role is used here for the entire prompt, including context,
-            // as OpenRouter's API might interpret the first message as the primary directive.
-            // Some APIs also support a dedicated 'system' role for context.
+           
             { role: 'user', content: fullPrompt }
           ],
-          // Optional: Add parameters to control AI behavior
-          // max_tokens: 500, // Limit response length if needed
-          // temperature: 0.7, // Control creativity; lower for more factual responses
+        
         },
         {
           headers: {

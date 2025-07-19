@@ -1,6 +1,5 @@
-import { Driver } from "../../drivers/entities/driver.entity";
 import { Ride } from "../../rides/entities/ride.entity";
-import { User } from "../../users/entities/user.entity";
+import { User } from "../../users/entities/user.entity"; // ⭐ Corrected: Import User entity ⭐
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity('reviews')
@@ -11,18 +10,17 @@ export class Review {
   @Column()
   driverId: string;
 
-  @ManyToOne(() => Driver)
+  @ManyToOne(() => User, user => user.reviewsReceived) 
   @JoinColumn({ name: 'driverId' })
-  driver: Driver;
+  driver: User; 
 
   @Column()
   userId: string;
 
-  @ManyToOne(() => User)
-  @JoinColumn({ name: 'userId' })
+  @ManyToOne(() => User, user => user.reviewsGiven) 
   user: User;
 
-  @Column({ type: 'float' })
+  @Column({ type: 'int' }) 
   rating: number;
 
   @Column({ nullable: true })
@@ -31,7 +29,7 @@ export class Review {
   @Column()
   rideId: string;
 
-  @ManyToOne(() => Ride)
+  @ManyToOne(() => Ride, ride => ride.reviews)
   @JoinColumn({ name: 'rideId' })
   ride: Ride;
 

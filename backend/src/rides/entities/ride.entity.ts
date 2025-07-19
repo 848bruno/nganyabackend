@@ -1,8 +1,9 @@
 import { Booking } from "../../bookings/entities/booking.entity";
-import { Driver } from "../../drivers/entities/driver.entity";
 import { Route } from "../../routes/entities/route.entity";
-import { Vehicle } from "../../vehicle/entities/vehicle.entity";
+import { User } from "../../users/entities/user.entity"; // Corrected: Import User entity
+import { Review } from "../../reviews/entities/review.entity"; // Import Review entity
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Vehicle } from "src/vehicle/entities/vehicle.entity";
 
 
 export enum RideType {
@@ -16,17 +17,19 @@ export enum RideStatus {
   Completed = 'completed',
   Cancelled = 'cancelled',
 }
+
 @Entity('rides')
 export class Ride {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
+  // Driver is now a User with role 'driver'
   @Column()
   driverId: string;
 
-  @ManyToOne(() => Driver)
+  @ManyToOne(() => User, (user) => user.ridesAsDriver) // Link to User entity and its ridesAsDriver property
   @JoinColumn({ name: 'driverId' })
-  driver: Driver;
+  driver: User; // This will be the User who is the driver for the ride
 
   @Column()
   vehicleId: string;
@@ -35,12 +38,12 @@ export class Ride {
   @JoinColumn({ name: 'vehicleId' })
   vehicle: Vehicle;
 
-  @Column({ nullable: true })
-  routeId: string;
+  @Column({ nullable: true }) // Made nullable to match update logic
+  routeId: string | null; // Made nullable to match update logic
 
-  @ManyToOne(() => Route, { nullable: true })
+  @ManyToOne(() => Route, { nullable: true }) // Made nullable to match update logic
   @JoinColumn({ name: 'routeId' })
-  route: Route;
+  route: Route | null; // Made nullable to match update logic
 
   @Column('jsonb')
   pickUpLocation: { lat: number; lng: number };
@@ -48,11 +51,11 @@ export class Ride {
   @Column('jsonb')
   dropOffLocation: { lat: number; lng: number };
 
-  @Column({ type: 'enum', enum: ['private', 'carpool'], default: 'private' })
-  type: string;
+  @Column({ type: 'enum', enum: RideType, default: RideType.Private }) // Use enum directly
+  type: RideType;
 
-  @Column({ type: 'enum', enum: ['pending', 'active', 'completed', 'cancelled'], default: 'pending' })
-  status: string;
+  @Column({ type: 'enum', enum: RideStatus, default: RideStatus.Pending }) // Use enum directly
+  status: RideStatus;
 
   @Column({ type: 'float' })
   fare: number;
@@ -71,4 +74,7 @@ export class Ride {
 
   @OneToMany(() => Booking, booking => booking.ride)
   bookings: Booking[];
+
+  @OneToMany(() => Review, review => review.ride)
+  reviews: Review[]; // Added reviews relation
 }

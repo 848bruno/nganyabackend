@@ -7,5 +7,6 @@ import { LocationService } from './geo.service';
   imports: [HttpModule],
   controllers: [RouteController],
   providers: [LocationService],
+    exports: [LocationService],
 })
 export class GeoModule {}

@@ -1,5 +1,12 @@
-import { Ride } from "../../rides/entities/ride.entity";
-import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  OneToOne, // Change to OneToOne as a vehicle has one current driver (User)
+  CreateDateColumn,
+  UpdateDateColumn,
+} from 'typeorm';
+import { User } from '../../users/entities/user.entity'; // Import User
 
 export enum VehicleType {
   Sedan = 'sedan',
@@ -11,7 +18,7 @@ export enum VehicleType {
 
 export enum VehicleStatus {
   Available = 'available',
-  InUse = 'in_use',
+  InUse = 'in_use', // Renamed from 'on_trip' for consistency
   Maintenance = 'maintenance',
 }
 
@@ -23,11 +30,11 @@ export class Vehicle {
   @Column()
   licensePlate: string;
 
-  @Column({ type: 'enum', enum: ['sedan', 'suv', 'luxury', 'van', 'bike'] })
-  type: string;
+  @Column({ type: 'enum', enum: VehicleType })
+  type: VehicleType;
 
-  @Column({ type: 'enum', enum: ['available', 'in_use', 'maintenance'], default: 'available' })
-  status: string;
+  @Column({ type: 'enum', enum: VehicleStatus, default: VehicleStatus.Available })
+  status: VehicleStatus;
 
   @Column()
   model: string;
@@ -41,6 +48,9 @@ export class Vehicle {
   @UpdateDateColumn()
   updatedAt: Date;
 
-  @OneToMany(() => Ride, ride => ride.vehicle)
-  rides: Ride[];
+
+  @OneToOne(() => User, (user) => user.assignedVehicle, {
+    nullable: true,
+  })
+  currentDriver?: User | null;
 }

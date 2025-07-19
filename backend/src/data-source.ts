@@ -2,8 +2,9 @@ import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 import { User } from './users/entities/user.entity';
 import { Vehicle } from './vehicle/entities/vehicle.entity';
-import { Driver } from './drivers/entities/driver.entity';
-// ...import other entities...
+import { Ride } from './rides/entities/ride.entity';
+import { Route } from './routes/entities/route.entity';
+
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
@@ -17,7 +18,10 @@ export const AppDataSource = new DataSource({
   entities: [
     User,
     Vehicle,
-    Driver,
-    // ...add all your other entities here
+    Ride,
+    Route,
+    
+   
+    
   ],
 });

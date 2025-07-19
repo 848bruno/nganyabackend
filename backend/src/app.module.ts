@@ -5,7 +5,7 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 
 
-import { DriverModule } from './drivers/drivers.module';
+
 import { RouteModule } from './routes/routes.module';
 import { RideModule } from './rides/rides.module';
 import { BookingModule } from './bookings/bookings.module';
@@ -57,9 +57,8 @@ import { ChatModule } from './chat/chat.module';
 
     DatabaseModule, // ADD THIS
     UsersModule,
-    VehicleModule, 
-    DriverModule,
-    RouteModule, 
+    VehicleModule,
+    RouteModule,
     RideModule,
     BookingModule, 
     DeliveryModule,

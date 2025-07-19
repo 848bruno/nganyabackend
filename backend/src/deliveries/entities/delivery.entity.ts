@@ -1,9 +1,8 @@
+import { User } from "src/users/entities/user.entity";
 import { Booking } from "../../bookings/entities/booking.entity";
-import { Driver } from "../../drivers/entities/driver.entity";
-import { User } from "../../users/entities/user.entity";
-import { Vehicle } from "../../vehicle/entities/vehicle.entity";
+// Corrected: Import from 'vehicles' folder
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
-
+import { Vehicle } from "src/vehicle/entities/vehicle.entity";
 
 export enum DeliveryStatus {
   Pending = 'pending',
@@ -12,31 +11,32 @@ export enum DeliveryStatus {
   Delivered = 'delivered',
   Cancelled = 'cancelled',
 }
+
 @Entity('deliveries')
 export class Delivery {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column()
-  userId: string;
+  userId: string; // Customer who requested the delivery
 
-  @ManyToOne(() => User)
+  @ManyToOne(() => User, user => user.deliveriesAsCustomer) // ⭐ Updated: Reference User and its inverse relation ⭐
   @JoinColumn({ name: 'userId' })
   user: User;
 
   @Column({ nullable: true })
-  driverId: string;
+  driverId: string | null; // ⭐ Updated: Allow null for driverId ⭐
 
-  @ManyToOne(() => Driver, { nullable: true })
+  @ManyToOne(() => User, user => user.deliveriesAsDriver, { nullable: true }) // ⭐ Updated: Reference User and its inverse relation ⭐
   @JoinColumn({ name: 'driverId' })
-  driver: Driver;
+  driver: User | null; // ⭐ Updated: Type is now User | null ⭐
 
   @Column({ nullable: true })
-  vehicleId: string;
+  vehicleId: string | null; // ⭐ Updated: Allow null for vehicleId ⭐
 
   @ManyToOne(() => Vehicle, { nullable: true })
   @JoinColumn({ name: 'vehicleId' })
-  vehicle: Vehicle;
+  vehicle: Vehicle | null; // ⭐ Updated: Type is now Vehicle | null ⭐
 
   @Column('jsonb')
   pickUpLocation: { lat: number; lng: number };
@@ -47,11 +47,11 @@ export class Delivery {
   @Column()
   itemType: string;
 
-  @Column({ type: 'enum', enum: ['pending', 'picked_up', 'in_transit', 'delivered', 'cancelled'], default: 'pending' })
-  status: string;
+  @Column({ type: 'enum', enum: DeliveryStatus, default: DeliveryStatus.Pending }) // ⭐ Updated: Use DeliveryStatus enum directly ⭐
+  status: DeliveryStatus; // ⭐ Updated: Type is now DeliveryStatus ⭐
 
   @Column({ nullable: true })
-  proofOfDelivery: string;
+  proofOfDelivery: string; // URL or path to an image
 
   @Column({ type: 'float' })
   cost: number;

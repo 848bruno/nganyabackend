@@ -1,5 +1,5 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, ForbiddenException, Req } from '@nestjs/common';
-import { ReviewService } from './reviews.service';
+import { Controller, Get, Post, Body, Patch, Param, Delete, ForbiddenException, Req, Query } from '@nestjs/common';
+import { ReviewsService } from './reviews.service';
 import { CreateReviewDto, ReviewResponseDto } from './dto/create-review.dto';
 import { UpdateReviewDto } from './dto/update-review.dto';
 
@@ -11,11 +11,11 @@ import { UserRole } from 'src/users/entities/user.entity';
 @ApiBearerAuth()
 @Controller('reviews')
 export class ReviewController {
-  constructor(private readonly reviewService: ReviewService) {
-   
+  constructor(private readonly reviewService: ReviewsService) {
+
   }
 
-   private checkRole(req: any, allowedRoles: UserRole[]) {
+    private checkRole(req: any, allowedRoles: UserRole[]) {
     if (!req.user || !allowedRoles.includes(req.user.role)) {
       throw new ForbiddenException('You do not have permission to perform this action');
     }
@@ -36,16 +36,29 @@ export class ReviewController {
   @Get()
   @Roles(UserRole.Admin, UserRole.Driver, UserRole.Customer)
   @ApiOperation({ summary: 'Get all reviews' })
-  @ApiResponse({ status: 200, type: [ReviewResponseDto] })
-  async findAll(@Req() req): Promise<ReviewResponseDto[]> {
+  @ApiResponse({
+    status: 200, schema: {
+      type: 'object',
+      properties: {
+        data: { type: 'array', items: { $ref: '#/components/schemas/ReviewResponseDto' } },
+        total: { type: 'number' },
+      },
+    },
+  })
+  async findAll(
+    @Req() req,
+    @Query('page') page: number = 1,
+    @Query('limit') limit: number = 10,
+  ): Promise<{ data: ReviewResponseDto[], total: number }> { // Corrected return type
     this.checkRole(req, [UserRole.Admin, UserRole.Driver, UserRole.Customer]);
+
     if (req.user.role === UserRole.Driver) {
-      return this.reviewService.findByDriver(req.user.id);
+      return await this.reviewService.findByDriver(req.user.id, page, limit);
     }
     if (req.user.role === UserRole.Customer) {
-      return this.reviewService.findByUser(req.user.id);
+      return await this.reviewService.findByUser(req.user.id, page, limit);
     }
-    return this.reviewService.findAll();
+    return await this.reviewService.findAll(page, limit);
   }
 
   @Get(':id')
