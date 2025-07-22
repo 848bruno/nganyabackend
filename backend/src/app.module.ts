@@ -28,6 +28,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { HttpModule } from '@nestjs/axios';
 import { GeoModule } from './geo/geo.module';
 import { ChatModule } from './chat/chat.module';
+import { InAppChatModule } from './in-app-chat/in-app-chat.module';
+import { ConversationModule } from './conversation/conversation.module';
+import { ChatGateway } from './in-app-chat/chat.gateway';
+
 
 
 
@@ -64,9 +68,9 @@ import { ChatModule } from './chat/chat.module';
     DeliveryModule,
     PaymentModule, 
     ReviewModule, 
-    NotificationModule, GeoModule, ChatModule, 
+    NotificationModule, GeoModule, ChatModule, InAppChatModule, ConversationModule, 
   ],
-  providers: [
+  providers: [ ChatGateway, AppService,
     
     {
       provide: APP_GUARD,
