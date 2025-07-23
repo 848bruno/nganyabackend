@@ -8,10 +8,11 @@ import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
 import { AtStrategy, RfStrategy } from './strategies';
 import { User } from 'src/users/entities/user.entity';
+import { UsersModule } from 'src/users/users.module';
 
 
 @Module({
-  imports: [
+  imports: [UsersModule,
     DatabaseModule,
     TypeOrmModule.forFeature([User]),
     JwtModule.register({

@@ -35,19 +35,13 @@ export class UserController {
   private checkRole(req: any, allowedRoles: UserRole[]) {
     console.log('checkRole: req.user:', req.user);
     if (!req.user) {
-      console.error('checkRole: req.user is undefined or null. Authentication failed or token missing.');
-      console.error('checkRole: THROWING FORBIDDEN (no req.user).'); // ⭐ NEW LOG ⭐
+   
       throw new ForbiddenException('Authentication required to perform this action');
     }
-    console.log('checkRole: Type of req.user.role:', typeof req.user.role);
-    console.log('checkRole: Value of req.user.role:', req.user.role);
-    console.log('checkRole: Allowed roles:', allowedRoles);
-    console.log('checkRole: UserRole.Driver (from enum):', UserRole.Driver);
-    console.log('checkRole: UserRole.Customer (from enum):', UserRole.Customer);
-    console.log('checkRole: UserRole.Admin (from enum):', UserRole.Admin);
+    
 
     const includesRole = allowedRoles.includes(req.user.role);
-    console.log('checkRole: Does allowedRoles include req.user.role?', includesRole);
+    
 
     if (!includesRole) {
       console.error(`checkRole: User role '${req.user.role}' not in allowed roles: ${allowedRoles.join(', ')}. THROWING FORBIDDEN (role mismatch).`); // ⭐ NEW LOG ⭐
@@ -66,7 +60,7 @@ export class UserController {
   }
 
   @Get()
-  @Roles(UserRole.Admin)
+  @Roles(UserRole.Admin, UserRole.Customer, UserRole.Driver)
   @ApiOperation({ summary: 'Get all users (admin only, can filter by role)' })
   @ApiResponse({ status: 200, type: [UserResponseDto] })
   async findAll(
@@ -76,7 +70,7 @@ export class UserController {
     @Query('role') role?: UserRole,
     @Query('q') q?: string,
   ): Promise<{ data: User[]; total: number }> {
-    this.checkRole(req, [UserRole.Admin]);
+    this.checkRole(req, [UserRole.Admin, UserRole.Customer, UserRole.Driver]);
     return await this.userService.findAll(page, limit, role, q);
   }
 

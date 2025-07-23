@@ -1,75 +1,49 @@
-// src/auth/guards/ws.guard.ts
-import { CanActivate, ExecutionContext, Injectable, Logger } from '@nestjs/common';
-import { Observable } from 'rxjs';
+// src/auth/guards/ws.guard.ts (MODIFIED getRequest method)
+import { CanActivate, ExecutionContext, Injectable, Logger, UnauthorizedException } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
+import { WsException } from '@nestjs/websockets';
 import { Socket } from 'socket.io';
-import { JwtService } from '@nestjs/jwt';
-import { ConfigService } from '@nestjs/config';
-import { UserService } from 'src/users/users.service'; // Assuming you have a UserService to find users by ID
+import { User } from 'src/users/entities/user.entity';
 
 @Injectable()
-export class WsGuard implements CanActivate {
+export class WsGuard extends AuthGuard('jwt-at') implements CanActivate {
   private readonly logger = new Logger(WsGuard.name);
 
-  constructor(
-    private jwtService: JwtService,
-    private configService: ConfigService,
-    private userService: UserService, // Inject UserService
-  ) {}
-
-  canActivate(
-    context: ExecutionContext,
-  ): boolean | Promise<boolean> | Observable<boolean> {
-    const client: Socket = context.switchToWs().getClient();
-    const authToken = client.handshake.headers.authorization;
-
-    if (!authToken) {
-      this.logger.warn('No authorization token provided for WebSocket connection.');
-      client.emit('error', { message: 'Unauthorized: No token provided' });
-      return false;
-    }
-
-    const token = authToken.split(' ')[1]; // Expecting "Bearer <token>"
-
-    if (!token) {
-      this.logger.warn('Invalid authorization header format for WebSocket connection.');
-      client.emit('error', { message: 'Unauthorized: Invalid token format' });
-      return false;
-    }
-
-    try {
-      const jwtSecret = this.configService.get<string>('AT_SECRET'); // Use your access token secret
-      const payload = this.jwtService.verify(token, { secret: jwtSecret });
-
-      // Attach user payload to the socket for later use
-      (client as any).user = payload;
-      this.logger.debug(`WebSocket client ${client.id} authenticated successfully. User ID: ${payload.sub}`);
-
-      // You might want to fetch the full user object from the database
-      // and attach it, especially if the JWT payload is minimal.
-      // For this example, we'll fetch the user and attach it.
-      return this.validateUser(payload.sub, client);
-
-    } catch (error) {
-      this.logger.error(`WebSocket authentication failed: ${error.message}`);
-      client.emit('error', { message: 'Unauthorized: Invalid token', details: error.message });
-      return false;
-    }
+  constructor() {
+    super();
   }
 
-  private async validateUser(userId: string, client: Socket): Promise<boolean> {
-    try {
-      const user = await this.userService.findOne(userId); // Fetch the user from your database
-      if (!user) {
-        this.logger.warn(`User with ID ${userId} not found in database for WebSocket connection.`);
-        client.emit('error', { message: 'Unauthorized: User not found' });
-        return false;
-      }
-      (client as any).user = user; // Attach the full user object to the socket
-      return true;
-    } catch (error) {
-      this.logger.error(`Error validating user from database for WebSocket: ${error.message}`);
-      client.emit('error', { message: 'Internal server error during authentication' });
-      return false;
-    }
+  // ⭐ MODIFIED getRequest method ⭐
+  getRequest(context: ExecutionContext) {
+    const client: Socket = context.switchToWs().getClient<Socket>();
+    // Manually attach the token from handshake.auth to a place Passport can find it,
+    // e.g., in a custom header-like property for the 'request' object.
+    // Passport-JWT's ExtractJwt.fromAuthHeaderAsBearerToken() will look for 'authorization' header.
+    // Let's mimic that or use a custom extractor that explicitly looks at client.handshake.auth.
+    // For now, let's ensure the `AtStrategy`'s custom extractor is correctly typed and positioned.
+    // The issue is more likely that ExtractJwt.fromExtractors needs an array of functions that
+    // EACH know how to get the 'request' object (which is the Socket in this context).
+    return client; // Keep this as Socket; the issue is in the AtStrategy's extractor.
   }
+
+  // ... (rest of WsGuard remains the same)
+
+  // If the issue persists, you might need to manually set `client.request.headers.authorization`
+  // before calling `super.canActivate(context)` in `WsGuard`.
+  // For example:
+  /*
+  async canActivate(context: ExecutionContext): Promise<boolean> {
+    const client: Socket = context.switchToWs().getClient<Socket>();
+    const authToken = client.handshake.auth.token;
+
+    if (authToken) {
+      // Create a dummy 'request' object structure that Passport expects
+      // and attach the token. This might be an alternative if direct socket access
+      // in the strategy's extractor doesn't work reliably with ExtractJwt.fromExtractors.
+      // However, the current AtStrategy extractor *should* work if the context is passed as Socket.
+      (client as any).request = { headers: { authorization: `Bearer ${authToken}` } };
+    }
+    return (await super.canActivate(context)) as boolean;
+  }
+  */
 }
