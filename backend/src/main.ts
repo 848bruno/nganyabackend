@@ -6,7 +6,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AllExceptionsFilter } from './http-exception.filter';
 import { ValidationPipe, Logger } from '@nestjs/common'; // Import Logger
 import helmet from 'helmet';
-import { WsAuthAdapter } from './ws-auth.adapter'; // ⭐ IMPORT YOUR CUSTOM WS AUTH ADAPTER ⭐
+import { WsAuthAdapter } from './ws-auth.adapter'; 
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -28,7 +28,7 @@ async function bootstrap() {
   });
   app.useGlobalPipes(new ValidationPipe());
 
-  // ⭐ CRITICAL: Apply the custom WebSocket Adapter for global authentication ⭐
+  //  CRITICAL: Apply the custom WebSocket Adapter for global authentication 
   app.useWebSocketAdapter(new WsAuthAdapter(app));
 
   const { httpAdapter } = app.get(HttpAdapterHost);

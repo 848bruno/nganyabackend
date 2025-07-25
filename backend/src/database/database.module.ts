@@ -1,13 +1,7 @@
-// import { Module } from '@nestjs/common';
-// import { TypeOrmModule } from '@nestjs/typeorm';
-// import { ConfigModule, ConfigService } from '@nestjs/config';
-
+// src/app.module.ts (or your DatabaseModule file)
 import { Module } from "@nestjs/common";
 import { ConfigModule, ConfigService } from "@nestjs/config";
 import { TypeOrmModule } from "@nestjs/typeorm";
-
-
-
 
 @Module({
   imports: [
@@ -18,7 +12,6 @@ import { TypeOrmModule } from "@nestjs/typeorm";
         type: 'postgres',
         url: process.env.DATABASE_URL,
         autoLoadEntities: true,
-        // use false in production and manage migrations
         ssl: {
           rejectUnauthorized: false,
         },
@@ -28,8 +21,11 @@ import { TypeOrmModule } from "@nestjs/typeorm";
         password: configService.getOrThrow<string>('DB_PASSWORD'),
         database: configService.getOrThrow<string>('DB_NAME'),
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
-        synchronize: configService.getOrThrow<boolean>('DB_SYNC', true),
-        logging: configService.getOrThrow<boolean>('DB_LOGGING', false),
+        synchronize: configService.getOrThrow<boolean>('DB_SYNC', false), // Keep this as false for production
+        // ⭐ TEMPORARILY HARDCODE LOGGING FOR DEBUGGING ⭐
+        logging: ['query', 'error', 'schema', 'log'], // Log queries, errors, schema sync, and general logs
+        logger: 'advanced-console',  // Use advanced-console for better formatting
+        // ⭐ END TEMPORARY HARDCODED CHANGE ⭐
         migrations: [__dirname + '/../migrations/**/*{.ts,.js}'],
       }),
       inject: [ConfigService],

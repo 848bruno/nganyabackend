@@ -104,7 +104,7 @@ export class User {
   @OneToMany(() => Review, (review) => review.user)
   reviewsGiven: Review[];
 
-  @OneToMany(() => Review, (review) => review.driver) // ⭐ Corrected: Link to review.driver property ⭐
+  @OneToMany(() => Review, (review) => review.driver) 
   reviewsReceived: Review[];
 
   // Rides associated with this user as a driver
