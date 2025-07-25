@@ -15864,3 +15864,14 @@
 [2025-07-24T18:06:45.820Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
 [2025-07-24T18:07:18.813Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
 [2025-07-24T18:08:39.876Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-25T14:58:15.918Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-25T14:58:17.152Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-25T14:58:19.181Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-25T14:58:23.408Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-25T15:33:13.741Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-25T15:53:44.729Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-25T15:53:44.870Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users/me/rides?limit=10&status=pending
+[2025-07-25T15:53:44.813Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users/me/vehicle
+[2025-07-25T15:53:44.892Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users/me
+[2025-07-25T15:54:01.289Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-25T15:54:07.100Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats

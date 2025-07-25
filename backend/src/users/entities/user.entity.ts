@@ -19,6 +19,7 @@ import { Vehicle } from 'src/vehicle/entities/vehicle.entity';
 
 
 
+
 export enum UserRole {
   Customer = 'customer',
   Driver = 'driver',
@@ -122,4 +123,5 @@ export class User {
   // Deliveries associated with this user as a customer
   @OneToMany(() => Delivery, (delivery) => delivery.user)
   deliveriesAsCustomer: Delivery[];
+
 }

@@ -1,11 +1,15 @@
 // src/chat/chat.gateway.ts
 import { WebSocketGateway, SubscribeMessage, MessageBody, WebSocketServer, ConnectedSocket } from '@nestjs/websockets';
-import { Server, Socket } from 'socket.io';
+
 import { Logger, ForbiddenException } from '@nestjs/common';
 import { User } from 'src/users/entities/user.entity';
-import { ChatServices } from './in-app-chat.service';
+import { ChatServices } from './in-app-chat.service'; // Assuming this path is correct now
 import { GetUserWs } from 'src/auth/decorators/get-user-ws.decorator';
 import { ConfigService } from '@nestjs/config';
+
+// ⭐ Import the new Message entity ⭐
+import { Message } from './entities/message.entity'; // Adjust path if needed
+import { Server, Socket } from 'socket.io';
 
 @WebSocketGateway({
   cors: {
@@ -39,14 +43,11 @@ export class ChatGateway {
     this.logger.log(`User ${user.email} joined personal room: ${user.id}`);
 
     try {
-      // It's generally better to send initial data via a specific event after connection,
-      // rather than relying on an implicit fetch. However, for now, we'll keep the join.
       const conversations = await this.chatService.getConversationsForUser(user.id);
       conversations.forEach(conv => {
         client.join(conv.id);
         this.logger.log(`User ${user.email} joined conversation room: ${conv.id}`);
       });
-      // You should emit the conversations back here, or via the @SubscribeMessage('getConversations') handler
       client.emit('conversations', { event: 'conversations', data: conversations });
       this.logger.log(`Emitted 'conversations' to client ${client.id} on connect.`);
 
@@ -56,13 +57,11 @@ export class ChatGateway {
     }
   }
 
-  // Add this handler for when the frontend explicitly requests conversations
   @SubscribeMessage('getConversations')
   async handleGetConversations(@ConnectedSocket() client: Socket, @GetUserWs() user: User) {
     this.logger.log(`Received 'getConversations' from client: ${client.id} (User: ${user.id})`);
     try {
       const conversations = await this.chatService.getConversationsForUser(user.id);
-      // Emit to the specific client that requested
       client.emit('conversations', { event: 'conversations', data: conversations });
       this.logger.log(`Emitted 'conversations' to client ${client.id} after 'getConversations' request.`);
     } catch (error) {
@@ -71,7 +70,6 @@ export class ChatGateway {
     }
   }
 
-  // Add this handler for creating new conversations
   @SubscribeMessage('createConversation')
   async handleCreateConversation(
     @ConnectedSocket() client: Socket,
@@ -80,38 +78,27 @@ export class ChatGateway {
   ) {
     this.logger.log(`Received 'createConversation' from client: ${client.id} (User: ${user.id}) with participants: ${payload.participantIds} and title: ${payload.title}`);
     try {
-      // Ensure the current user is always a participant
       const allParticipantIds = [...new Set([...payload.participantIds, user.id])];
-
-      // Check if a conversation with these exact participants already exists
       let existingConversation = await this.chatService.findConversationByParticipants(allParticipantIds);
 
       if (!existingConversation) {
-        // If not, create a new one
         existingConversation = await this.chatService.createConversation(allParticipantIds, payload.title);
         this.logger.log(`New conversation created: ${existingConversation.id}`);
 
-        // Join the creator to the new conversation room
         client.join(existingConversation.id);
         this.logger.log(`User ${user.email} joined new conversation room: ${existingConversation.id}`);
 
-        // Emit 'newConversation' to all participants so their UIs update
         for (const participantId of allParticipantIds) {
           this.server.to(participantId).emit('newConversation', existingConversation);
           this.logger.log(`Emitted 'newConversation' to participant room: ${participantId}`);
         }
       } else {
         this.logger.log(`Conversation already exists for participants, returning existing: ${existingConversation.id}`);
-        // If conversation already exists, just return it to the creator
-        // The frontend expects `newConversation` event to update, so send that.
-        // It should also select this conversation.
         client.emit('newConversation', existingConversation);
       }
-
-      // If needed, you can also send a success message or the full conversation details back to the creator
-      // client.emit('conversationCreatedSuccess', existingConversation); // Or some other confirmation event
     } catch (error) {
       this.logger.error(`Failed to create conversation for user ${user.id}: ${error.message}`);
+      console.trace('Error stack trace for createConversation failure:');
       client.emit('error', { message: 'Failed to create conversation.' });
     }
   }
@@ -124,24 +111,16 @@ export class ChatGateway {
   ) {
     this.logger.log(`Received 'sendMessage' from client ${client.id} for conversation ${payload.conversationId}. Content: ${payload.content.substring(0, 50)}...`);
     try {
-      const message = await this.chatService.createMessage(
+      const message = await this.chatService.createMessage( // ⭐ This now calls the updated createMessage ⭐
         payload.conversationId,
         user.id,
         payload.content,
       );
-
-      // Optionally, you can add the tempMessageId to the message object here
-      // if you want the client to use it for matching.
       const messageToSend = { ...message, tempMessageId: payload.tempMessageId };
-
-      // Emit to all participants in the conversation room
       this.server.to(payload.conversationId).emit('message', messageToSend);
       this.logger.log(`Emitted 'message' to conversation room ${payload.conversationId}. Message ID: ${message.id}`);
-
-      // Update last message in conversation
       await this.chatService.updateConversationLastMessage(payload.conversationId, message.content, message.createdAt);
       this.logger.log(`Updated last message for conversation: ${payload.conversationId}`);
-
     } catch (error) {
       this.logger.error(`Failed to send message for user ${user.id} in conversation ${payload.conversationId}: ${error.message}`);
       client.emit('error', { message: 'Failed to send message.' });
@@ -156,23 +135,15 @@ export class ChatGateway {
   ) {
     this.logger.log(`Received 'getConversationMessages' from client ${client.id} for conversation: ${payload.conversationId}`);
     try {
-      // Ensure the user is a participant of this conversation
       const isParticipant = await this.chatService.isUserInConversation(payload.conversationId, user.id);
       if (!isParticipant) {
         throw new ForbiddenException('You are not a participant of this conversation.');
       }
-
-      const messages = await this.chatService.getMessagesForConversation(payload.conversationId);
-      // Emit to the specific client that requested
+      const messages = await this.chatService.getMessagesForConversation(payload.conversationId); // ⭐ This now calls the updated getMessagesForConversation ⭐
       client.emit('conversationMessages', { event: 'conversationMessages', data: messages });
       this.logger.log(`Emitted 'conversationMessages' to client ${client.id} for conversation ${payload.conversationId}.`);
-
-      // Mark messages as read for the requesting user
-      await this.chatService.markMessagesAsRead(payload.conversationId, user.id);
-      this.logger.log(`Marked messages as read for user ${user.id} in conversation ${payload.conversationId}`);
-      // Notify other participants in the conversation that messages were read by this user
+      await this.chatService.markMessagesAsRead(payload.conversationId, user.id); // ⭐ This now calls the updated markMessagesAsRead ⭐
       client.to(payload.conversationId).emit('messagesRead', { conversationId: payload.conversationId, userId: user.id });
-
     } catch (error) {
       this.logger.error(`Failed to get messages for conversation ${payload.conversationId} for user ${user.id}: ${error.message}`);
       client.emit('error', { message: 'Failed to load messages.' });
@@ -191,11 +162,8 @@ export class ChatGateway {
       if (!isParticipant) {
         throw new ForbiddenException('You are not a participant of this conversation.');
       }
-
-      await this.chatService.markMessagesAsRead(payload.conversationId, user.id);
+      await this.chatService.markMessagesAsRead(payload.conversationId, user.id); // ⭐ This now calls the updated markMessagesAsRead ⭐
       this.logger.log(`Successfully marked messages as read for user ${user.id} in conversation ${payload.conversationId}`);
-
-      // Emit to others in the conversation room (excluding sender) that messages were read
       client.to(payload.conversationId).emit('messagesRead', { conversationId: payload.conversationId, userId: user.id });
       this.logger.log(`Emitted 'messagesRead' to conversation room ${payload.conversationId} (excluding sender).`);
     } catch (error) {

@@ -1,7 +1,8 @@
-// src/chat/entities/conversation.entity.ts
+// src/conversation/entities/conversation.entity.ts
 import { Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable, OneToMany, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 import { User } from '../../users/entities/user.entity'; // Import the User entity
-import { ChatMessage } from 'src/in-app-chat/entities/in-app-chat.entity';
+import { Message } from 'src/in-app-chat/entities/message.entity';
+import { MessageStatus } from 'src/in-app-chat/entities/message-status.entity';
 
 @Entity('conversations')
 export class Conversation {
@@ -16,8 +17,11 @@ export class Conversation {
   })
   participants: User[];
 
-  @OneToMany(() => ChatMessage, (message) => message.conversation)
-  messages: ChatMessage[];
+  @OneToMany(() => Message, (message) => message.conversation) // ⭐ Changed from ChatMessage to Message ⭐
+  messages: Message[];
+
+  @OneToMany(() => MessageStatus, (status) => status.conversation) // ⭐ Add relationship to MessageStatus ⭐
+  messageStatuses: MessageStatus[];
 
   @Column({ type: 'text', nullable: true })
   title: string | null;

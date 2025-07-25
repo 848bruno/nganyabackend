@@ -1,21 +1,28 @@
 // src/chat/chat.service.ts
-import { Injectable, NotFoundException, BadRequestException, ForbiddenException } from '@nestjs/common';
+import { Injectable, NotFoundException, BadRequestException, ForbiddenException, Logger } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository, In } from 'typeorm'; // Import 'In' for array queries
+import { Repository, In } from 'typeorm';
 
-import { User } from 'src/users/entities/user.entity';
-import { ChatMessage } from './entities/in-app-chat.entity';
+
+// ⭐ Import the new Message and MessageStatus entities ⭐
+import { Message } from './entities/message.entity';
+import { MessageStatus } from './entities/message-status.entity';
 import { Conversation } from 'src/conversation/entities/conversation.entity';
+import { User } from 'src/users/entities/user.entity';
 
 @Injectable()
 export class ChatServices {
+  private readonly logger = new Logger(ChatServices.name);
+
   constructor(
     @InjectRepository(Conversation)
-    public conversationRepository: Repository<Conversation>,
-    @InjectRepository(ChatMessage)
-    private messageRepository: Repository<ChatMessage>,
+    private conversationRepository: Repository<Conversation>,
+    @InjectRepository(Message) // ⭐ Use Message entity ⭐
+    private messageRepository: Repository<Message>,
     @InjectRepository(User)
     private userRepository: Repository<User>,
+    @InjectRepository(MessageStatus) // ⭐ Inject MessageStatus repository ⭐
+    private messageStatusRepository: Repository<MessageStatus>,
   ) {}
 
   /**
@@ -42,41 +49,28 @@ export class ChatServices {
       title: title || null,
       createdAt: new Date(),
       updatedAt: new Date(),
+      // participants will be set via the relation API or by assigning the array directly
+      // If assigning array directly, TypeORM handles the join table insertion.
+      // Let's try assigning directly first, as it's simpler and often works.
+      participants: participants,
     });
 
     const savedConversation = await this.conversationRepository.save(newConversation);
+    this.logger.log(`Conversation ${savedConversation.id} created.`);
 
-    // 2. Now, add the participants to the ManyToMany relationship using the relation API.
-    // This explicitly handles the insertion into the 'conversation_participants' join table.
-    try {
-      await this.conversationRepository
-        .createQueryBuilder()
-        .relation(Conversation, 'participants')
-        .of(savedConversation) // Reference the newly saved conversation
-        .add(participants.map(p => p.id)); // Add participants by their IDs
-      
-      // If adding by IDs works, it's often more efficient and less prone to circular dependency issues.
-
-    } catch (relationError) {
-      // If adding participants fails, consider rolling back the conversation creation
-      // or logging a more specific error.
-      console.error(`Error adding participants to conversation ${savedConversation.id}:`, relationError);
-      // Optionally delete the partially created conversation if this is a critical failure
-      // await this.conversationRepository.delete(savedConversation.id);
-      throw new BadRequestException('Failed to establish conversation participants relationship.');
+    // ⭐ Initialize MessageStatus for all participants in this new conversation ⭐
+    for (const participant of participants) {
+      const messageStatus = this.messageStatusRepository.create({
+        user: participant,
+        conversation: savedConversation,
+        lastReadMessage: null, // No messages yet, so nothing read
+        unreadCount: 0,
+      });
+      await this.messageStatusRepository.save(messageStatus);
+      this.logger.log(`MessageStatus created for user ${participant.id} in conversation ${savedConversation.id}`);
     }
 
-    // 3. Fetch the conversation again with participants to ensure the returned object is complete
-    const conversationWithParticipants = await this.conversationRepository.findOne({
-      where: { id: savedConversation.id },
-      relations: ['participants'],
-    });
-
-    if (!conversationWithParticipants) {
-        throw new NotFoundException('Failed to retrieve conversation after creation and participant assignment.');
-    }
-
-    return conversationWithParticipants;
+    return savedConversation;
   }
 
   /**
@@ -86,30 +80,30 @@ export class ChatServices {
    * @returns The found Conversation entity or undefined if not found.
    */
   async findConversationByParticipants(participantIds: string[]): Promise<Conversation | undefined> {
-    // Sort participant IDs to ensure consistent matching regardless of order
     const sortedParticipantIds = [...participantIds].sort();
+    const expectedCount = sortedParticipantIds.length;
 
-    // Find conversations that have the same number of participants
     const possibleConversations = await this.conversationRepository
       .createQueryBuilder('conversation')
       .leftJoinAndSelect('conversation.participants', 'participant')
       .where((qb) => {
-        // Subquery to count participants for each conversation
         const subQuery = qb
           .subQuery()
           .select('COUNT(cp.userId)')
-          .from('conversation_participants_user', 'cp')
+          .from('conversation_participants', 'cp') // Correct join table name
           .where('cp.conversationId = conversation.id')
           .getQuery();
-        return `(${subQuery}) = :count`;
+
+        return `(${subQuery}) = :expectedCount`;
       })
       .andWhere('participant.id IN (:...ids)', { ids: sortedParticipantIds })
+      .setParameter('expectedCount', expectedCount) // Explicitly set parameter
       .getMany();
 
-    // Filter to find the exact match
+    // Filter in memory to ensure exact match of participants
     for (const conv of possibleConversations) {
       const convParticipantIds = conv.participants.map(p => p.id).sort();
-      if (convParticipantIds.length === sortedParticipantIds.length &&
+      if (convParticipantIds.length === expectedCount &&
           convParticipantIds.every((id, index) => id === sortedParticipantIds[index])) {
         return conv;
       }
@@ -120,19 +114,22 @@ export class ChatServices {
 
   /**
    * Retrieves all conversations for a specific user, ordered by the last message time.
-   * Includes participant details.
+   * Includes participant details and message status for the user.
    * @param userId The ID of the user.
    * @returns An array of Conversation entities.
    */
   async getConversationsForUser(userId: string): Promise<Conversation[]> {
     return this.conversationRepository.find({
+      relations: ['participants', 'messageStatuses', 'messageStatuses.user'], // Load participants and message statuses
       where: {
         participants: {
           id: userId,
         },
       },
-      relations: ['participants'], // Load participants for display
-      order: { lastMessageAt: 'DESC', createdAt: 'DESC' }, // Order by last message for chat list, fallback to creation date
+      order: {
+        lastMessageAt: 'DESC', // Order by last message time
+        createdAt: 'DESC', // Fallback order
+      },
     });
   }
 
@@ -158,53 +155,77 @@ export class ChatServices {
    * Retrieves all messages for a specific conversation, ordered chronologically.
    * Includes sender details.
    * @param conversationId The ID of the conversation.
-   * @returns An array of ChatMessage entities.
+   * @returns An array of Message entities.
    */
-  async getMessagesForConversation(conversationId: string): Promise<ChatMessage[]> {
+  async getMessagesForConversation(conversationId: string): Promise<Message[]> { // ⭐ Return type changed to Message[] ⭐
     return this.messageRepository.find({
-      where: { conversationId },
-      relations: ['sender'], // Load sender details
-      order: { createdAt: 'ASC' }, // Order messages chronologically
+      where: { conversation: { id: conversationId } },
+      relations: ['sender'],
+      order: {
+        createdAt: 'ASC',
+      },
     });
   }
 
   /**
    * Creates a new chat message within a conversation.
+   * Updates the conversation's last message details and unread counts.
    * Throws BadRequestException if sender is not a participant.
    * Throws NotFoundException if conversation is not found.
    * @param conversationId The ID of the conversation.
    * @param senderId The ID of the user sending the message.
    * @param content The message content.
-   * @returns The newly created ChatMessage entity.
+   * @returns The newly created Message entity.
    */
-  async createMessage(conversationId: string, senderId: string, content: string): Promise<ChatMessage> {
+  async createMessage(conversationId: string, senderId: string, content: string): Promise<Message> { // ⭐ Return type changed to Message ⭐
     const conversation = await this.conversationRepository.findOne({
       where: { id: conversationId },
-      relations: ['participants'], // Load participants to verify sender
+      relations: ['participants'],
     });
 
     if (!conversation) {
-      throw new NotFoundException('Conversation not found.');
-    }
-
-    const isParticipant = conversation.participants.some(p => p.id === senderId);
-    if (!isParticipant) {
-      throw new BadRequestException('Sender is not a participant of this conversation.');
+      throw new NotFoundException(`Conversation with ID ${conversationId} not found`);
     }
 
     const sender = conversation.participants.find(p => p.id === senderId);
     if (!sender) {
-      throw new NotFoundException('Sender not found in conversation participants.');
+      throw new ForbiddenException('Sender is not a participant of this conversation.');
     }
 
-    const message = this.messageRepository.create({
+    const newMessage = this.messageRepository.create({
       conversation,
       sender,
       content,
       createdAt: new Date(),
     });
 
-    const savedMessage = await this.messageRepository.save(message);
+    const savedMessage = await this.messageRepository.save(newMessage);
+    this.logger.log(`Message ${savedMessage.id} created in conversation ${conversationId}.`);
+
+    // Update unread counts for all participants except the sender
+    for (const participant of conversation.participants) {
+      const messageStatus = await this.messageStatusRepository.findOne({
+        where: { user: { id: participant.id }, conversation: { id: conversation.id } },
+      });
+
+      if (messageStatus) {
+        if (participant.id !== senderId) { // Increment for others
+          messageStatus.unreadCount = (messageStatus.unreadCount || 0) + 1;
+          await this.messageStatusRepository.save(messageStatus);
+          this.logger.log(`Unread count for user ${participant.id} in conversation ${conversation.id} incremented.`);
+        }
+      } else {
+        this.logger.warn(`MessageStatus not found for participant ${participant.id} in conversation ${conversation.id}. Creating one.`);
+        // Fallback: Create if not found (should ideally be created with conversation)
+        const newStatus = this.messageStatusRepository.create({
+          user: participant,
+          conversation: conversation,
+          lastReadMessage: null,
+          unreadCount: (participant.id !== senderId) ? 1 : 0,
+        });
+        await this.messageStatusRepository.save(newStatus);
+      }
+    }
 
     // Update last message in conversation
     await this.updateConversationLastMessage(conversation.id, content, savedMessage.createdAt);
@@ -228,38 +249,44 @@ export class ChatServices {
       lastMessageAt,
       updatedAt: new Date(),
     });
+    this.logger.log(`Conversation ${conversationId} last message updated.`);
   }
 
   /**
    * Marks messages in a conversation as read for a specific user.
-   * Note: This implementation is a placeholder. A robust read receipt system
-   * would typically involve a separate entity (e.g., UserConversationStatus)
-   * to track the last read message/timestamp per user per conversation.
-   * For now, it primarily serves as a backend check and a trigger for frontend updates.
+   * Resets unread count and updates last read message.
    * @param conversationId The ID of the conversation.
    * @param userId The ID of the user marking messages as read.
    */
   async markMessagesAsRead(conversationId: string, userId: string): Promise<void> {
-    // First, ensure the user is a participant of the conversation
-    const isParticipant = await this.isUserInConversation(conversationId, userId);
-    if (!isParticipant) {
-      throw new ForbiddenException('You are not a participant of this conversation.');
+    const messageStatus = await this.messageStatusRepository.findOne({
+      where: { user: { id: userId }, conversation: { id: conversationId } },
+      relations: ['user', 'conversation'], // Ensure relations are loaded if needed for checks
+    });
+
+    if (!messageStatus) {
+      throw new NotFoundException(`MessageStatus not found for user ${userId} in conversation ${conversationId}`);
     }
 
-    // ⭐ Placeholder for actual database update for read receipts ⭐
-    // In a real application, you would update a 'lastReadMessageId' or 'lastReadAt'
-    // for this specific user within this conversation.
-    // Example (conceptual, requires schema modification):
-    /*
-    await this.conversationRepository.createQueryBuilder()
-      .relation(Conversation, 'participants')
-      .of(conversationId)
-      .set({ lastReadMessageId: latestMessageId, lastReadAt: new Date() }, { userId: userId });
-    */
+    // Get the latest message in the conversation to set as lastReadMessage
+    const latestMessage = await this.messageRepository.findOne({
+      where: { conversation: { id: conversationId } },
+      order: { createdAt: 'DESC' },
+    });
 
-    // For now, this method primarily acts as a validation and a signal to the gateway
-    // that messages should be considered read for this user.
-    // The frontend handles the unreadCount update locally based on this trigger.
-    console.log(`[ChatServices] User ${userId} marked messages in conversation ${conversationId} as read (backend logic placeholder).`);
+    if (latestMessage) {
+      messageStatus.lastReadMessage = latestMessage;
+      messageStatus.unreadCount = 0; // Reset unread count
+      messageStatus.updatedAt = new Date(); // Update timestamp
+      await this.messageStatusRepository.save(messageStatus);
+      this.logger.log(`Messages marked as read for user ${userId} in conversation ${conversationId}. Unread count reset.`);
+    } else {
+      // If no messages exist, just reset unread count
+      messageStatus.lastReadMessage = null;
+      messageStatus.unreadCount = 0;
+      messageStatus.updatedAt = new Date();
+      await this.messageStatusRepository.save(messageStatus);
+      this.logger.log(`No messages found in conversation ${conversationId}. Unread count reset for user ${userId}.`);
+    }
   }
 }

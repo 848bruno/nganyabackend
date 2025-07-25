@@ -9,11 +9,14 @@ import { ChatServices } from './in-app-chat.service';
 import { WsGuard } from 'src/auth/guards/ws.guard';
 import { UsersModule } from 'src/users/users.module';
 import { ChatGateway } from './chat.gateway';
+import { Message } from './entities/message.entity';
+import { MessageStatus } from './entities/message-status.entity';
 
 
 @Module({
   imports: [UsersModule,
-    TypeOrmModule.forFeature([Conversation, ChatMessage, User,]),
+    TypeOrmModule.forFeature([Conversation, ChatMessage, User, Message, 
+      MessageStatus, ]),
   ],
   providers: [ChatServices, WsGuard, ChatGateway],
   exports: [ChatServices, WsGuard, ChatGateway],
