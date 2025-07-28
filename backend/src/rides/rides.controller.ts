@@ -1,120 +1,92 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, ForbiddenException, Request, Query, NotFoundException } from '@nestjs/common';
-import { RideService } from './rides.service';
-import { CreateRideDto, RideResponseDto} from './dto/create-ride.dto'; // Corrected: UpdateRideDto is now correctly imported from here
-import { Roles } from 'src/auth/decorators/roles.decoretor';
-import { ApiBearerAuth, ApiTags, ApiOperation, ApiResponse, ApiBody } from '@nestjs/swagger';
-import { UserRole } from 'src/users/entities/user.entity';
-import { RideStatus } from './entities/ride.entity';
-import { UpdateRideDto } from './dto/update-ride.dto';
+// src/rides/rides.controller.ts
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Query } from '@nestjs/common';
 
-@ApiTags('rides')
+import { CreateRideDto, UpdateRideDto, RideResponseDto } from './dto/create-ride.dto';
+import { AtGuard } from 'src/auth/guards/at.guard';
+import { UserRole } from 'src/users/entities/user.entity';
+import { RolesGuard } from 'src/auth/guards/roles.guard';
+
+import { User } from 'src/users/entities/user.entity';
+import { RideStatus } from './entities/ride.entity';
+import { RidesGateway } from './rides.gateway'; // Import RidesGateway
+import { IncomingRideRequestDto } from './dto/ride-websocket.dto';
+import { RideService } from './rides.service';
+import { Roles } from 'src/auth/decorators/roles.decoretor';
+import { GetUserWs } from 'src/auth/decorators/get-user-ws.decorator';
+import { ApiBearerAuth } from '@nestjs/swagger';
+
 @ApiBearerAuth()
 @Controller('rides')
-export class RidesController { // Corrected: Class name is RidesController
-  constructor(private readonly rideService: RideService) {}
-
-  private checkRole(req: any, allowedRoles: UserRole[]) {
-    if (!req.user || !allowedRoles.includes(req.user.role)) {
-      throw new ForbiddenException('You do not have permission to perform this action');
-    }
-  }
+@UseGuards(AtGuard, RolesGuard)
+export class RidesController {
+  constructor(
+    private readonly rideService: RideService,
+    private readonly ridesGateway: RidesGateway, // Inject RidesGateway
+  ) {}
 
   @Post()
-  @Roles(UserRole.Driver)
-  @ApiOperation({ summary: 'Create a new ride' })
-  @ApiResponse({ status: 201, type: RideResponseDto })
-  async create(@Body() createRideDto: CreateRideDto, @Request() req): Promise<RideResponseDto> {
-    this.checkRole(req, [UserRole.Driver]);
-    if (req.user.id !== createRideDto.driverId && req.user.role !== UserRole.Admin) {
-      throw new ForbiddenException('You can only create rides for yourself or as an admin.');
-    }
-    return this.rideService.create(createRideDto);
-  }
+  @Roles(UserRole.Customer) // Only customers can initiate a ride booking via this endpoint
+  async create(
+    @Body() createRideDto: CreateRideDto,
+    @GetUserWs() customer: User, // Get the authenticated customer
+  ): Promise<RideResponseDto> {
+    const ride = await this.rideService.create(createRideDto, customer.id); // Pass customer ID to service
 
-  @Get()
-  @Roles(UserRole.Admin, UserRole.Customer, UserRole.Driver)
-  @ApiOperation({ summary: 'Get all rides (can filter by status, driver, or customer)' })
-  @ApiResponse({ status: 200, type: [RideResponseDto] })
-  async findAll(
-    @Request() req,
-    @Query('page') page: number = 1,
-    @Query('limit') limit: number = 10,
-    @Query('status') status?: RideStatus,
-    @Query('driverId') driverId?: string,
-    @Query('customerId') customerId?: string,
-  ): Promise<{ data: RideResponseDto[], total: number }> {
-    this.checkRole(req, [UserRole.Admin, UserRole.Customer, UserRole.Driver]);
-
-    // Logic to restrict access based on role
-    if (req.user.role === UserRole.Customer && customerId && req.user.id !== customerId) {
-      throw new ForbiddenException('Customers can only view their own rides.');
-    }
-    if (req.user.role === UserRole.Driver && driverId && req.user.id !== driverId) {
-      throw new ForbiddenException('Drivers can only view their own rides.');
-    }
-    if (req.user.role === UserRole.Driver && !driverId) {
-        // If a driver doesn't specify driverId, default to their own
-        driverId = req.user.id;
-    }
-    if (req.user.role === UserRole.Customer && !customerId) {
-        // If a customer doesn't specify customerId, default to their own
-        customerId = req.user.id;
-    }
-
-
-    return await this.rideService.findAll(page, limit, status, driverId, customerId);
-  }
-
-  @Get(':id')
-  @Roles(UserRole.Admin, UserRole.Customer, UserRole.Driver)
-  @ApiOperation({ summary: 'Get a ride by ID' })
-  @ApiResponse({ status: 200, type: RideResponseDto })
-  async findOne(@Param('id') id: string, @Request() req): Promise<RideResponseDto> {
-    this.checkRole(req, [UserRole.Admin, UserRole.Customer, UserRole.Driver]);
-    const ride = await this.rideService.findOne(id);
-
-    // Implement access control:
-    // Admin can see any ride.
-    // Driver can see their own rides.
-    // Customer can see rides they have booked.
-    const isDriverOfRide = req.user.role === UserRole.Driver && ride.driverId === req.user.id;
-    // FIX: Add optional chaining for ride.bookings
-    const isCustomerOfRide = req.user.role === UserRole.Customer && ride.bookings?.some(b => b.userId === req.user.id);
-
-    if (req.user.role !== UserRole.Admin && !isDriverOfRide && !isCustomerOfRide) {
-      throw new ForbiddenException('You do not have permission to view this ride.');
-    }
+    // ⭐ Emit WebSocket event to the driver ⭐
+    const payload: IncomingRideRequestDto = {
+      rideId: ride.id,
+      customerId: customer.id,
+      customerName: customer.name || customer.email.split('@')[0], // Use name or part of email
+      pickUpLocation: ride.pickUpLocation,
+      dropOffLocation: ride.dropOffLocation,
+      fare: ride.fare,
+      rideType: ride.type,
+    };
+    await this.ridesGateway.emitIncomingRideRequest(ride.driverId, payload);
 
     return ride;
   }
 
+  @Get()
+  @Roles(UserRole.Admin, UserRole.Customer, UserRole.Driver)
+  findAll(
+    @Query('page') page: string,
+    @Query('limit') limit: string,
+    @Query('status') status: RideStatus,
+    @Query('driverId') driverId: string,
+    @Query('customerId') customerId: string,
+  ): Promise<{ data: RideResponseDto[], total: number }> {
+    return this.rideService.findAll(+page, +limit, status, driverId, customerId);
+  }
+
+  @Get(':id')
+  @Roles(UserRole.Admin, UserRole.Customer, UserRole.Driver)
+  findOne(@Param('id') id: string): Promise<RideResponseDto> {
+    return this.rideService.findOne(id);
+  }
+
   @Patch(':id')
-  @Roles(UserRole.Admin, UserRole.Driver) // Only admin or the ride's driver can update
-  @ApiOperation({ summary: 'Update a ride' })
-  @ApiResponse({ status: 200, type: RideResponseDto })
-  async update(@Param('id') id: string, @Body() updateRideDto: UpdateRideDto, @Request() req): Promise<RideResponseDto> {
-    this.checkRole(req, [UserRole.Admin, UserRole.Driver]);
-    const ride = await this.rideService.findOne(id); // Fetch to check ownership
-
-    if (req.user.role !== UserRole.Admin && ride.driverId !== req.user.id) {
-      throw new ForbiddenException('You can only update rides you are driving.');
-    }
-
-    return await this.rideService.update(id, updateRideDto);
+  @Roles(UserRole.Admin, UserRole.Driver) // Assuming Admin or Driver can update rides
+  update(@Param('id') id: string, @Body() updateRideDto: UpdateRideDto): Promise<RideResponseDto> {
+    return this.rideService.update(id, updateRideDto);
   }
 
   @Delete(':id')
-  @Roles(UserRole.Admin, UserRole.Driver) // Only admin or the ride's driver can delete
-  @ApiOperation({ summary: 'Delete a ride' })
-  @ApiResponse({ status: 204 })
-  async remove(@Param('id') id: string, @Request() req): Promise<void> {
-    this.checkRole(req, [UserRole.Admin, UserRole.Driver]);
-    const ride = await this.rideService.findOne(id); // Fetch to check ownership
+  @Roles(UserRole.Admin) // Only Admin can delete rides
+  remove(@Param('id') id: string): Promise<void> {
+    return this.rideService.remove(id);
+  }
 
-    if (req.user.role !== UserRole.Admin && ride.driverId !== req.user.id) {
-      throw new ForbiddenException('You can only delete rides you are driving.');
-    }
+  // Optional: Add specific endpoints for drivers/customers if not covered by findAll
+  @Get('driver/my-rides')
+  @Roles(UserRole.Driver)
+  findDriverRides(@GetUserWs() driver: User): Promise<RideResponseDto[]> {
+    return this.rideService.findByDriver(driver.id);
+  }
 
-    await this.rideService.remove(id);
+  @Get('customer/my-rides')
+  @Roles(UserRole.Customer)
+  findCustomerRides(@GetUserWs() customer: User): Promise<RideResponseDto[]> {
+    return this.rideService.findByCustomer(customer.id);
   }
 }

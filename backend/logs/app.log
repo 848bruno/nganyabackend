@@ -15875,3 +15875,242 @@
 [2025-07-25T15:53:44.892Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users/me
 [2025-07-25T15:54:01.289Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
 [2025-07-25T15:54:07.100Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-27T12:31:35.428Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T12:31:36.171Z] [::1] ERROR: {"message":"Cannot POST /auth/refresh","error":"Not Found","statusCode":404} - Path: /auth/refresh
+[2025-07-27T12:31:37.373Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T12:31:39.455Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T12:31:43.518Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T12:31:58.157Z] [::1] ERROR: getaddrinfo ENOTFOUND ep-super-rain-a85j6ln8-pooler.eastus2.azure.neon.tech - Path: /auth/signin
+[2025-07-27T12:39:48.075Z] [::1] ERROR: getaddrinfo ENOTFOUND ep-super-rain-a85j6ln8-pooler.eastus2.azure.neon.tech - Path: /users?page=1&limit=1000
+[2025-07-27T12:41:12.999Z] [::1] ERROR: getaddrinfo ENOTFOUND ep-super-rain-a85j6ln8-pooler.eastus2.azure.neon.tech - Path: /users?page=1&limit=1000
+[2025-07-27T12:41:24.642Z] [::1] ERROR: getaddrinfo ENOTFOUND ep-super-rain-a85j6ln8-pooler.eastus2.azure.neon.tech - Path: /users?page=1&limit=1000
+[2025-07-27T12:46:18.391Z] [::1] ERROR: getaddrinfo ENOTFOUND ep-super-rain-a85j6ln8-pooler.eastus2.azure.neon.tech - Path: /users?page=1&limit=1000
+[2025-07-27T12:46:33.641Z] [::1] ERROR: getaddrinfo ENOTFOUND ep-super-rain-a85j6ln8-pooler.eastus2.azure.neon.tech - Path: /users?page=1&limit=1000
+[2025-07-27T13:44:23.495Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T13:44:23.704Z] [::1] ERROR: {"message":"Cannot POST /auth/refresh","error":"Not Found","statusCode":404} - Path: /auth/refresh
+[2025-07-27T13:44:25.925Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T13:44:29.541Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T13:44:32.329Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T13:44:34.350Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T13:44:38.375Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T15:26:57.094Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T15:28:46.456Z] [::1] ERROR: {"message":"Expected property name or '}' in JSON at position 1 (line 1 column 2)","error":"Bad Request","statusCode":400} - Path: /rides
+[2025-07-27T15:29:59.851Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T15:30:01.890Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T15:30:05.933Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T15:46:01.844Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T15:46:02.057Z] [::1] ERROR: {"message":"Cannot POST /auth/refresh","error":"Not Found","statusCode":404} - Path: /auth/refresh
+[2025-07-27T15:46:05.882Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T15:46:07.392Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T15:46:09.430Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T15:46:13.479Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T15:49:24.494Z] [::1] ERROR: {"message":"Routing failed: aborted","error":"Internal Server Error","statusCode":500} - Path: /route/calculate
+[2025-07-27T16:28:36.720Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T16:28:38.303Z] [::1] ERROR: {"message":"Cannot POST /auth/refresh","error":"Not Found","statusCode":404} - Path: /auth/refresh
+[2025-07-27T16:28:40.214Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T16:28:43.194Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T16:28:47.425Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T16:29:05.536Z] [::1] ERROR: getaddrinfo ENOTFOUND ep-super-rain-a85j6ln8-pooler.eastus2.azure.neon.tech - Path: /auth/signin
+[2025-07-27T16:29:22.696Z] [::1] ERROR: getaddrinfo ENOTFOUND ep-super-rain-a85j6ln8-pooler.eastus2.azure.neon.tech - Path: /auth/signin
+[2025-07-27T16:31:01.715Z] [::1] ERROR: connect ETIMEDOUT 52.167.188.143:5432 - Path: /auth/signin
+[2025-07-27T16:31:25.690Z] [::1] ERROR: connect ETIMEDOUT 52.167.188.143:5432 - Path: /auth/signin
+[2025-07-27T16:31:40.761Z] [::1] ERROR: read ECONNRESET - Path: /auth/signin
+[2025-07-27T18:29:03.295Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides
+[2025-07-27T18:31:25.910Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides
+[2025-07-27T19:11:23.158Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T19:11:24.054Z] [::1] ERROR: {"message":"Cannot POST /auth/refresh","error":"Not Found","statusCode":404} - Path: /auth/refresh
+[2025-07-27T19:11:25.199Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T19:11:27.232Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T19:11:31.310Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T19:11:57.908Z] [::1] ERROR: {"message":"Routing failed: Impossible route between points","error":"Internal Server Error","statusCode":500} - Path: /route/calculate
+[2025-07-27T19:38:36.707Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T19:38:38.422Z] [::1] ERROR: {"message":"Cannot POST /auth/refresh","error":"Not Found","statusCode":404} - Path: /auth/refresh
+[2025-07-27T19:38:50.499Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T19:38:53.089Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T19:38:57.712Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T19:40:01.681Z] [::1] ERROR: {"message":"Routing failed: Impossible route between points","error":"Internal Server Error","statusCode":500} - Path: /route/calculate
+[2025-07-27T19:40:23.086Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides
+[2025-07-27T19:40:32.963Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides
+[2025-07-27T19:40:53.942Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides
+[2025-07-27T19:51:38.064Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides
+[2025-07-27T19:58:34.884Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides
+[2025-07-27T19:59:30.580Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides
+[2025-07-27T20:03:30.161Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides
+[2025-07-27T20:11:17.326Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T20:11:18.600Z] [::1] ERROR: {"message":"Cannot POST /auth/refresh","error":"Not Found","statusCode":404} - Path: /auth/refresh
+[2025-07-27T20:11:35.894Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T20:11:37.919Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T20:11:41.962Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T20:13:15.667Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides
+[2025-07-27T20:22:33.125Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:22:38.193Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides
+[2025-07-27T20:22:40.200Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:22:53.338Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides
+[2025-07-27T20:23:09.751Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:23:15.452Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides
+[2025-07-27T20:23:39.753Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:24:09.773Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:24:40.281Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:25:10.229Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:25:40.241Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:26:26.110Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:26:39.772Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:26:40.501Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /rides
+[2025-07-27T20:27:10.231Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:27:40.228Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:28:26.902Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:38:10.016Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T20:38:10.611Z] [::1] ERROR: {"message":"Cannot POST /auth/refresh","error":"Not Found","statusCode":404} - Path: /auth/refresh
+[2025-07-27T20:38:29.842Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T20:38:32.428Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T20:38:45.447Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T20:38:49.984Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T20:38:52.582Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T20:38:57.215Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-27T20:43:26.268Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:43:56.224Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:44:26.224Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:44:56.249Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:45:26.237Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:45:56.248Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-27T20:46:26.240Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-28T05:38:32.788Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-28T05:39:03.036Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-28T05:39:32.803Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-28T05:40:02.867Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-28T05:40:33.065Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-28T05:41:03.048Z] [::1] ERROR: {"message":"Cannot GET /users/drivers/available","error":"Not Found","statusCode":404} - Path: /users/drivers/available
+[2025-07-28T05:41:17.610Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:41:20.423Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:41:51.047Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:42:21.050Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:42:51.214Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:43:21.036Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:43:51.184Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:44:21.062Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:45:29.207Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:46:29.048Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:47:28.190Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:47:50.410Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:48:20.362Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:48:51.035Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:49:21.023Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:49:51.010Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:49:57.034Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:50:02.815Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:50:08.851Z] [::1] ERROR: {"message":["rideId must be a UUID"],"error":"Bad Request","statusCode":400} - Path: /bookings
+[2025-07-28T05:50:29.096Z] [::1] ERROR: {"message":["rideId must be a UUID"],"error":"Bad Request","statusCode":400} - Path: /bookings
+[2025-07-28T05:50:32.817Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:51:02.848Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:51:32.856Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:52:02.804Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:52:26.649Z] [::1] ERROR: {"message":["rideId must be a UUID"],"error":"Bad Request","statusCode":400} - Path: /bookings
+[2025-07-28T05:52:32.875Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:53:03.036Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:53:13.856Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /bookings
+[2025-07-28T05:53:13.971Z] [::1] ERROR: {"message":"Cannot POST /auth/refresh","error":"Not Found","statusCode":404} - Path: /auth/refresh
+[2025-07-28T05:53:33.008Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:54:03.023Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:54:33.003Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:55:26.775Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:55:33.106Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T05:55:59.901Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-28T06:00:13.058Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-28T06:00:16.412Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-28T06:00:17.967Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-28T06:00:20.006Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-28T06:00:24.065Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-28T06:02:12.847Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:02:35.036Z] [::1] ERROR: {"message":["rideId must be a UUID"],"error":"Bad Request","statusCode":400} - Path: /bookings
+[2025-07-28T06:02:42.878Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:03:12.873Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:03:40.300Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:03:43.480Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:04:14.009Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:04:44.003Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:05:01.554Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:05:03.125Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:05:27.624Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:05:33.249Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:05:40.678Z] [::1] ERROR: {"message":["rideId must be a UUID"],"error":"Bad Request","statusCode":400} - Path: /bookings
+[2025-07-28T06:05:57.089Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:06:03.167Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:06:27.071Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:06:33.196Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:06:57.108Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:07:03.152Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:07:27.084Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:07:33.149Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:07:57.078Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:08:03.153Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:08:28.010Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:08:34.175Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:08:58.049Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:09:04.023Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:09:29.012Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:10:29.037Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:10:29.626Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:11:08.065Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:11:08.677Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:11:28.011Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:11:34.033Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:11:58.031Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:12:04.021Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:12:29.029Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:13:29.027Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:13:30.225Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:14:38.571Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:14:40.453Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:19:20.244Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-28T06:19:21.330Z] [::1] ERROR: {"message":"Cannot POST /auth/refresh","error":"Not Found","statusCode":404} - Path: /auth/refresh
+[2025-07-28T06:19:51.354Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-28T06:19:56.462Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-28T06:19:59.479Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-28T06:20:04.183Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /users?page=1&limit=1000
+[2025-07-28T06:26:47.141Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:26:53.208Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:27:24.028Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:27:54.028Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:28:23.176Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:28:42.820Z] [::1] ERROR: {"message":"Ride not found","error":"Bad Request","statusCode":400} - Path: /bookings
+[2025-07-28T06:28:53.180Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:29:23.181Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:29:54.012Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:32:03.743Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:32:11.530Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:32:15.452Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:32:17.373Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:32:19.337Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:32:21.241Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:32:23.304Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:32:25.046Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:32:26.318Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:32:27.906Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:32:58.030Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:33:28.034Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:33:58.038Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:34:28.034Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:34:58.002Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:35:28.032Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:36:12.361Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:36:28.014Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:36:58.033Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:37:28.042Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:37:58.010Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:38:29.008Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:39:29.132Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:40:29.035Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:41:29.024Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:42:29.103Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:43:25.877Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:43:28.579Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:43:36.579Z] [::1] ERROR: {"message":"Validation failed (numeric string is expected)","error":"Bad Request","statusCode":400} - Path: /users/drivers/nearest
+[2025-07-28T06:44:12.108Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /bookings
+[2025-07-28T06:44:12.187Z] [::1] ERROR: {"message":"Cannot POST /auth/refresh","error":"Not Found","statusCode":404} - Path: /auth/refresh
+[2025-07-28T06:45:36.686Z] [::1] ERROR: {"message":"Ride not found","error":"Bad Request","statusCode":400} - Path: /bookings
+[2025-07-28T07:40:29.631Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /bookings
+[2025-07-28T07:40:29.717Z] [::1] ERROR: {"message":"Cannot POST /auth/refresh","error":"Not Found","statusCode":404} - Path: /auth/refresh
+[2025-07-28T07:40:37.010Z] [::1] ERROR: {"message":"Unauthorized","statusCode":401} - Path: /bookings
+[2025-07-28T07:42:33.636Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-28T07:42:39.130Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats
+[2025-07-28T07:43:14.799Z] [::1] ERROR: {"message":"Cannot GET /admin/stats","error":"Not Found","statusCode":404} - Path: /admin/stats

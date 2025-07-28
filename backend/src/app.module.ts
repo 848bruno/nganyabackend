@@ -7,7 +7,7 @@ import { UsersModule } from './users/users.module';
 
 
 import { RouteModule } from './routes/routes.module';
-import { RideModule } from './rides/rides.module';
+
 import { BookingModule } from './bookings/bookings.module';
 import { DeliveryModule } from './deliveries/deliveries.module';
 import { PaymentModule } from './payments/payments.module';
@@ -31,6 +31,7 @@ import { ChatModule } from './chat/chat.module';
 import { InAppChatModule } from './in-app-chat/in-app-chat.module';
 import { ConversationModule } from './conversation/conversation.module';
 import { ChatGateway } from './in-app-chat/chat.gateway';
+import { RidesModule } from './rides/rides.module';
 
 
 
@@ -63,7 +64,7 @@ import { ChatGateway } from './in-app-chat/chat.gateway';
     UsersModule,
     VehicleModule,
     RouteModule,
-    RideModule,
+    RidesModule,
     BookingModule, 
     DeliveryModule,
     PaymentModule, 

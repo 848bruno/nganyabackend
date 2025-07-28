@@ -1,7 +1,8 @@
+// src/rides/entities/ride.entity.ts
 import { Booking } from "../../bookings/entities/booking.entity";
 import { Route } from "../../routes/entities/route.entity";
-import { User } from "../../users/entities/user.entity"; // Corrected: Import User entity
-import { Review } from "../../reviews/entities/review.entity"; // Import Review entity
+import { User } from "../../users/entities/user.entity";
+import { Review } from "../../reviews/entities/review.entity";
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { Vehicle } from "src/vehicle/entities/vehicle.entity";
 
@@ -13,6 +14,8 @@ export enum RideType {
 
 export enum RideStatus {
   Pending = 'pending',
+  Accepted = 'accepted', // Add this
+  Rejected = 'rejected', // Add this
   Active = 'active',
   Completed = 'completed',
   Cancelled = 'cancelled',
@@ -23,13 +26,12 @@ export class Ride {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  // Driver is now a User with role 'driver'
   @Column()
   driverId: string;
 
-  @ManyToOne(() => User, (user) => user.ridesAsDriver) // Link to User entity and its ridesAsDriver property
+  @ManyToOne(() => User, (user) => user.ridesAsDriver)
   @JoinColumn({ name: 'driverId' })
-  driver: User; // This will be the User who is the driver for the ride
+  driver: User;
 
   @Column()
   vehicleId: string;
@@ -38,12 +40,12 @@ export class Ride {
   @JoinColumn({ name: 'vehicleId' })
   vehicle: Vehicle;
 
-  @Column({ nullable: true }) // Made nullable to match update logic
-  routeId: string | null; // Made nullable to match update logic
+  @Column({ nullable: true })
+  routeId: string | null;
 
-  @ManyToOne(() => Route, { nullable: true }) // Made nullable to match update logic
+  @ManyToOne(() => Route, { nullable: true })
   @JoinColumn({ name: 'routeId' })
-  route: Route | null; // Made nullable to match update logic
+  route: Route | null;
 
   @Column('jsonb')
   pickUpLocation: { lat: number; lng: number };
@@ -51,10 +53,10 @@ export class Ride {
   @Column('jsonb')
   dropOffLocation: { lat: number; lng: number };
 
-  @Column({ type: 'enum', enum: RideType, default: RideType.Private }) // Use enum directly
+  @Column({ type: 'enum', enum: RideType, default: RideType.Private })
   type: RideType;
 
-  @Column({ type: 'enum', enum: RideStatus, default: RideStatus.Pending }) // Use enum directly
+  @Column({ type: 'enum', enum: RideStatus, default: RideStatus.Pending })
   status: RideStatus;
 
   @Column({ type: 'float' })
@@ -76,5 +78,5 @@ export class Ride {
   bookings: Booking[];
 
   @OneToMany(() => Review, review => review.ride)
-  reviews: Review[]; // Added reviews relation
+  reviews: Review[];
 }

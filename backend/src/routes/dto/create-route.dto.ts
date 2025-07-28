@@ -4,7 +4,8 @@ import { ApiProperty } from '@nestjs/swagger';
 import { User } from 'src/users/entities/user.entity'; // Import User for RouteResponseDto
 
 // Define a DTO for location points
-class LocationPointDto {
+// FIX: Add 'export' keyword here
+export class LocationPointDto {
   @ApiProperty({ example: 34.0522, description: 'Latitude of the location' })
   @IsNumber()
   lat: number;

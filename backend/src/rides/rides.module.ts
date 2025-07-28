@@ -1,21 +1,26 @@
-import { Module } from '@nestjs/common';
-import { RideService } from './rides.service';
-
+// src/rides/rides.module.ts
+import { Module, forwardRef } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Ride } from './entities/ride.entity';
 
+import { RidesController } from './rides.controller';
+import { Ride } from './entities/ride.entity';
+import { User } from 'src/users/entities/user.entity';
 import { Vehicle } from 'src/vehicle/entities/vehicle.entity';
 import { Booking } from 'src/bookings/entities/booking.entity';
-import { DatabaseModule } from 'src/database/database.module';
-import { RidesController } from './rides.controller';
 import { Route } from 'src/routes/entities/route.entity';
 import { Review } from 'src/reviews/entities/review.entity';
-import { User } from 'src/users/entities/user.entity';
+import { RidesGateway } from './rides.gateway'; // Import the Gateway
+import { RideService } from './rides.service';
+import { RouteModule } from 'src/routes/routes.module';
+
 
 @Module({
-  imports: [DatabaseModule,TypeOrmModule.forFeature([Ride, User, Vehicle, Route, Booking, Review])], // Added Review to forFeature
-  controllers: [RidesController], // Corrected controller name
-  providers: [RideService], // Corrected service name
-  exports: [RideService, TypeOrmModule.forFeature([Ride])],
+  imports: [
+    TypeOrmModule.forFeature([Ride, User, Vehicle, Booking, Route, Review]),
+    forwardRef(() => RouteModule), // Use forwardRef if RoutesModule also imports RidesModule
+  ],
+  controllers: [RidesController],
+  providers: [RideService, RidesGateway], // Add RidesGateway here
+  exports: [RideService, RidesGateway], // Export RideService and RidesGateway for use in other modules if needed
 })
-export class RideModule {}
+export class RidesModule {}

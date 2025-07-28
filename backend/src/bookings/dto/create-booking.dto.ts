@@ -18,7 +18,8 @@ export class CreateBookingDto {
 
   @IsOptional()
   @IsInt()
-  seatNumber?: number;
+  // FIX: Renamed 'seatNumber' to 'numberOfSeats'
+  numberOfSeats?: number; // Changed from seatNumber
 }
 
 export class UpdateBookingDto {
@@ -28,7 +29,8 @@ export class UpdateBookingDto {
 
   @IsOptional()
   @IsInt()
-  seatNumber?: number;
+  // FIX: Renamed 'seatNumber' to 'numberOfSeats'
+  numberOfSeats?: number; // Changed from seatNumber
 }
 
 export class BookingResponseDto {
@@ -53,7 +55,15 @@ export class BookingResponseDto {
 
   @IsOptional()
   @IsInt()
-  seatNumber?: number;
+  // FIX: Renamed 'seatNumber' to 'numberOfSeats'
+  numberOfSeats?: number; // Changed from seatNumber
+
+  // FIX: Added fareAtBooking to BookingResponseDto
+  // This was missing and caused a previous error in BookingService's toBookingResponseDto
+  // if you were trying to assign it.
+  // Add this property if it's part of your desired response.
+  fareAtBooking?: number;
+
 
   @IsDate()
   createdAt: Date;
